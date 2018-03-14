@@ -1,2 +1,25 @@
 @import 'reset'
 @import 'mixin'
+@import 'base'
+
+#topview
+  width: 100vw
+  height: 99vh
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-flow: column
+  .logo
+    height: 50vh
+
+#scrollDown
+  width: 100vw
+  display: flex
+  flex-flow: column
+  .line
+    width: 100vw
+    margin-top: 5px
+    background-color: #009544
+    @for $i from 1 through 4
+      &:nth-child(#{$i})
+        height: 10px * $i

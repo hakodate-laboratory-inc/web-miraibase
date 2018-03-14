@@ -7,9 +7,12 @@ meta(name="keywords", content='キーワード')
 meta(name='viewport' content='width=device-width,initial-scale=1.0')
 meta(name='robots' content='noindex')
 
-body
-  h1 Hello world!
-  p We are ready to go.
-  img(src="./images/mb-logo-vartical-green.svg", alt="")
+#topview
+  img.logo(src="./images/mb-logo-vartical-green.svg", alt="")
+  p では命じよう。―自害しろ、ランサー。
+
+#scrollDown
+  - for (let i = 0;i < 4;i++)
+    .line
 
 script(src='app.js')
