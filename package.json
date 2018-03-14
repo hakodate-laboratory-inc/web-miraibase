@@ -17,8 +17,7 @@
     "node-sass": "^4.7.2",
     "parcel-bundler": "^1.6.2",
     "parcel-plugin-pug": "^0.2.5",
-    "sweet-scroll": "^3.0.0",
-    "typescript": "^2.7.2"
+    "sweet-scroll": "^3.0.0"
   },
   "scripts": {
     "dev": "parcel src/index.pug",
