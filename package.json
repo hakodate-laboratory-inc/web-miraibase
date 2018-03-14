@@ -1,28 +1,28 @@
 {
-	"name": "web-miraibase",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "pingy dev",
-		"export": "pingy export"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/ryu-g/web-miraibase.git"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/ryu-g/web-miraibase/issues"
-	},
-	"homepage": "https://github.com/ryu-g/web-miraibase#readme",
-	"dependencies": {},
-	"devDependencies": {
-		"pug": "",
-		"node-sass": "^4",
-		"@pingy/cli": "^0.12.1"
-	}
+  "name": "web-miraibase",
+  "version": "1.0.0",
+  "description": "MIRAI BASE Website",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-html": "^4.0.2",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "node-mandrill": "^1.0.1",
+    "node-sass": "^4.7.2",
+    "parcel-bundler": "^1.6.2",
+    "parcel-plugin-imagemin": "^1.0.2",
+    "parcel-plugin-pug": "^0.2.5",
+    "sweet-scroll": "^3.0.0"
+  },
+  "scripts": {
+    "dev": "parcel src/index.pug",
+    "build": "parcel build src/index.pug --public-url ./ -d build",
+    "github-build": "parcel build src/index.pug --public-url ./ -d docs"
+  }
 }
