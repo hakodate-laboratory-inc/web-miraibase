@@ -9,5 +9,6 @@
 			"action": "exclude",
 			"type": "dir"
 		}
-	]
+	],
+	"port": 60133
 }
