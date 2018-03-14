@@ -16,6 +16,7 @@
     "node-mandrill": "^1.0.1",
     "node-sass": "^4.7.2",
     "parcel-bundler": "^1.6.2",
+    "parcel-plugin-imagemin": "^1.0.2",
     "parcel-plugin-pug": "^0.2.5",
     "sweet-scroll": "^3.0.0"
   },
