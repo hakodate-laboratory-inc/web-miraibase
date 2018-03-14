@@ -1,6 +1,7 @@
 @import 'reset'
 @import 'mixin'
 @import 'base'
+@import 'components'
 
 #topview
   width: 100vw
@@ -21,7 +22,12 @@
   .line
     width: 100vw
     margin-top: 5px
-    background-color: #009544
+    background-color: $green
     @for $i from 1 through 4
       &:nth-child(#{$i})
         height: 10px * $i
+
+#first
+  margin-top: 5px
+  display: flex
+  align-items: center
