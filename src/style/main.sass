@@ -11,7 +11,7 @@
   .logo
     height: 16.5vw
   p
-    margin-top: 2vw
+    margin-top: vw1680(50)
 
 #scrollDown
   width: 100vw
@@ -19,40 +19,40 @@
   flex-flow: column
   .line
     width: 100vw
-    margin-top: 5px
+    margin-top: vw1680(5)
     background-color: $green
     @for $i from 1 through 4
       &:nth-child(#{$i})
-        height: 10px * $i
+        height: vw1680(10) * $i
 
 #first
-  margin-top: (5vw / 1680 * 100)
+  margin-top: vw1680(5)
   display: flex
   align-items: center
   h2
-    margin-top: 50px
+    margin-top: vw1680(50)
 
 #event
   margin-top: 0
-  padding: 50px
+  padding: vw1680(50)
   +center
   h2
-    margin-top: 15px
+    margin-top: vw1680(15)
   .list
-    max-width: 1080px
+    max-width: vw1680(1080)
     display: grid
     grid-template-columns: 1fr 1fr 1fr
-    grid-gap: 50px
+    grid-gap: vw1680(50)
     .post
       +center
       align-items: flex-start
       img
         width: 100%
       h3
-        margin-top: 30px
+        margin-top: vw1680(30)
         text-align: left
       p
-        margin-top: 10px
+        margin-top: vw1680(10)
         text-align: justify
         line-height: 1.5em
         font-weight: 100
@@ -60,14 +60,14 @@
 #about
   +center
   h3
-    margin: 15px 0
+    margin: vw1680(15) 0
   .content
-    margin-top: 30px
+    margin-top: vw1680(30)
     display: flex
     align-items: flex-start
     max-width: 1080px
     .text
-      margin-left: 40px
+      margin-left: vw1680(40)
       line-height: 2em
     h2
       text-align: left
@@ -75,16 +75,16 @@
       text-align: justify
 
 #service
-  padding: 50px 0
+  padding: vw1680(50) 0
   +center
   h2
     line-height: 1.9em
   .list
     max-width: 1080px
-    margin-top: 30px
+    margin-top: vw1680(30)
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr
-    grid-gap: 50px
+    grid-gap: vw1680(50)
     .item
       +center
       align-items: flex-start
@@ -92,10 +92,10 @@
         width: 100%
         border-radius: 50%//丸くしてるのこれ　消せば四角
       h3
-        margin-top: 30px
+        margin-top: vw1680(30)
         text-align: left
       p
-        margin-top: 10px
+        margin-top: vw1680(10)
         text-align: justify
         line-height: 1.5em
         font-weight: 100
@@ -105,12 +105,12 @@
 
 #price
   .list
-    margin-top: 50px
+    margin-top: vw1680(50)
     display: flex
     justify-content: center
     .item
-      width: 300px
-      margin: 0 50px
+      width: vw1680(300)
+      margin: 0 vw1680(50)
       h3
         display: block
         height: 2.5em
