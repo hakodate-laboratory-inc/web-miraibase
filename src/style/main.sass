@@ -63,18 +63,6 @@
         max-height: (($listMaxWidth - $listGridGap * 2) / 3 ) * (9 / 16)
         position: relative
         transition: .2s
-        &:hover
-          transition-delay: .2s
-          img
-            filter: brightness(115%)
-          &::after, &::before
-            width: 100%
-          &::after
-            left: 0
-            right: auto
-          &::before
-            left: auto
-            right: 0
         &::after, &::before
           position: absolute
           content: ''
@@ -91,6 +79,18 @@
         &::before // right down
           left: 0
           bottom: 0
+        &:hover
+          transition-delay: .2s
+          img
+            filter: brightness(115%)
+          &::after, &::before
+            width: 100%
+          &::after
+            left: 0
+            right: auto
+          &::before
+            left: auto
+            right: 0
         img
           margin: auto 0
           position: absolute
