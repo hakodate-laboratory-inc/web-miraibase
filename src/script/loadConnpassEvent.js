@@ -35,7 +35,6 @@ const eventVue = new Vue({  // eslint-disable-line
           axios.get('http://hakolab.co.jp/api/avoidACAO.cgi?url=' + resEvent.event_url)
             .then(function (resres) {
               eventVue.events[i].imageSrc = /background-image:url\((\S*)\)/.exec(resres.data)[1]
-              console.log(eventVue.events[i].imageSrc)
             })
         })
       })
