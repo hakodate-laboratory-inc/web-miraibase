@@ -67,6 +67,20 @@
           position: absolute
           top: 0
           bottom: 0
+          z-index: 10
+        .loading
+          z-index: 0
+          opacity: .9
+          margin: auto
+          width: 5vw
+          right: 0
+          left: 0
+          animation: rotation 1s infinite
+          @keyframes rotation
+            0%
+              transform: rotate(0deg)
+            100%
+              transform: rotate(360deg)
       h3
         margin-top: 30px
         text-align: left
