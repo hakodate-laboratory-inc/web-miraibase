@@ -58,11 +58,25 @@
     .post
       +center
       align-items: flex-start
+
       +max-SP
         display: block
         margin-bottom: 30px
       img, a
         width: 100%
+      a
+        $listMaxWidth: 1080px
+        $listGridGap: 50px
+        display: block
+        overflow-y: hidden
+        height: calc(((100vw - 100px - #{$listGridGap} * 2) / 3) * (9 / 16))
+        max-height: (($listMaxWidth - $listGridGap * 2) / 3 ) * (9 / 16)
+        position: relative
+        img
+          margin: auto 0
+          position: absolute
+          top: 0
+          bottom: 0
       h3
         margin-top: 30px
         text-align: left
