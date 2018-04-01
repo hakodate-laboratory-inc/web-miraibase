@@ -74,11 +74,41 @@
         +max-SP
           height: calc((100vw * (9 / 16))
           max-height: 600px
+        transition: .2s
+        &::after, &::before // for hover animation
+          position: absolute
+          content: ''
+          display: block
+          background-color: #000
+          z-index: 10
+          transition: .3s
+          height: 25px
+          opacity: .6
+          width: 0
+        &::after // left up
+          top: 0
+          right: 0
+        &::before // right down
+          left: 0
+          bottom: 0
+        &:hover
+          img
+            filter: brightness(125%)
+          &::after, &::before
+            width: 100%
+          &::after
+            left: 0
+            right: auto
+          &::before
+            left: auto
+            right: 0
         img
           margin: auto 0
           position: absolute
           top: 0
           bottom: 0
+          transition: 1s
+          filter: brightness(100%)
       h3
         margin-top: 30px
         text-align: left
