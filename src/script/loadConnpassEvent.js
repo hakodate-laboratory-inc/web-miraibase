@@ -1,7 +1,7 @@
 import Vue from 'vue/dist/vue.js'
 import axios from 'axios'
 
-const eventVue = new Vue({  // eslint-disable-line
+const eventVue = new Vue({
   el: '#event',
   data: {
     events: [
@@ -9,13 +9,17 @@ const eventVue = new Vue({  // eslint-disable-line
         title: '',
         link: '',
         desc: '',
-        imageSrc: ''
+        imageSrc: '',
+        thumbnailStyle: 'display: none',
+        loadingStyle: ''
       },
       {
         title: '',
         link: '',
         desc: '',
-        imageSrc: ''
+        imageSrc: '',
+        thumbnailStyle: 'display: none',
+        loadingStyle: ''
       },
       {
         title: '',
@@ -23,7 +27,19 @@ const eventVue = new Vue({  // eslint-disable-line
         desc: '',
         imageSrc: ''
       }
-    ]
+    ],
+    thumbnailStyle: 'display: none',
+    loadingStyle: '',
+    loadedThumbnails: 0
+  },
+  methods: {
+    switchLoadingStyle: function () {
+      this.loadedThumbnails++
+      if (this.loadedThumbnails >= 3) {
+        this.thumbnailStyle = ''
+        this.loadingStyle = 'display: none'
+      }
+    }
   },
   mounted () {
     axios.get('http://hakolab.co.jp/api/loadConnpass.cgi')
