@@ -127,7 +127,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr
     grid-gap: 50px
     +max-SP
-     grid-template-columns: 1fr 1fr
+     grid-template-columns: 1fr 
      width: 90%
      grid-gap: 10vw 8%
     .item
@@ -144,7 +144,20 @@
         text-align: justify
         line-height: 1.5em
         font-weight: 100
-
+      +max-SP
+        flex-flow: row
+        img
+          width: 25%
+        .txt
+          margin-left: 20px
+          h3
+            margin-top: 0px
+            text-align: left
+          p
+            margin-top: 10px
+            text-align: justify
+            line-height: 1.5em
+            font-weight: 100
 
 
 
