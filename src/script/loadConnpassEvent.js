@@ -9,17 +9,13 @@ const eventVue = new Vue({
         title: '',
         link: '',
         desc: '',
-        imageSrc: '',
-        thumbnailStyle: 'display: none',
-        loadingStyle: ''
+        imageSrc: ''
       },
       {
         title: '',
         link: '',
         desc: '',
-        imageSrc: '',
-        thumbnailStyle: 'display: none',
-        loadingStyle: ''
+        imageSrc: ''
       },
       {
         title: '',
