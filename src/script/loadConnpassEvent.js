@@ -44,6 +44,11 @@ const eventVue = new Vue({
   mounted () {
     axios.get('http://hakolab.co.jp/api/loadConnpass.cgi')
       .then(function (res) {
+        res.data.events.sort(function (a, b) {
+          if (a.started_at < b.started_at) return -1
+          if (a.started_at > b.started_at) return 1
+          return 0
+        })
         res.data.events.forEach((resEvent, i) => {
           eventVue.events[i].title = resEvent.title
           eventVue.events[i].link = resEvent.event_url
