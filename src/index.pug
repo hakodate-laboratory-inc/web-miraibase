@@ -21,11 +21,13 @@ meta(name='robots' content='noindex')
 #event.bc-green.section
   .list
     .post(v-for='event in events')
-      a(v-bind:href='event.link', target="_blank")
-        img(v-bind:src='event.imageSrc' , v-bind:alt='event.title' v-bind:style='thumbnailStyle' @load='switchLoadingStyle')
-        img.loading(src='./images/loading-white.svg' v-bind:style='loadingStyle')
+      a(:href='event.link', target="_blank")
+        img(:src='event.imageSrc' , :alt='event.title' :style='thumbnailStyle' @load='switchLoadingStyle')
+        img.loading(src='./images/loading-white.svg' :style='loadingStyle')
       h3 {{event.title}}
       p(v-HTML='event.desc')
+  .error
+    p {{errorMessage}}
 
 #about.section
   h3 MIRAI BASEへようこそ

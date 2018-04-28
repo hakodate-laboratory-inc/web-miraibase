@@ -7,7 +7,8 @@ const eventVue = new Vue({
     events: [],
     thumbnailStyle: 'display: none',
     loadingStyle: '',
-    loadedThumbnails: 0
+    loadedThumbnails: 0,
+    errorMessage: ''
   },
   methods: {
     switchLoadingStyle: function () {
@@ -19,7 +20,7 @@ const eventVue = new Vue({
     }
   },
   mounted () {
-    axios.get('http://halab.co.jp/api/loadConnpass.cgi')
+    axios.get('http://hakolab.co.jp/api/loadConnpass.cgi')
       .then((res) => {
         res.data.events.sort(function (a, b) {
           if (a.started_at < b.started_at) return -1
@@ -44,6 +45,7 @@ const eventVue = new Vue({
       })
       .catch(() => {
         console.log('err')
+        this.errorMessage = 'イベント情報の取得に失敗しました。'
         this.thumbnailStyle = 'display: none'
         this.loadingStyle = 'display: none'
       })
