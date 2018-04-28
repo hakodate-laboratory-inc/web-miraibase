@@ -233,6 +233,37 @@
         .n
           text-align: right
 
+#reserved
+  +center
+  p.read
+    width: 600px
+    justify-content: center
+    text-align: left
+    margin: 25px 0
+
+  .list
+    max-width: 1080px
+    justify-content: center
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-gap: 50px
+    +max-SP
+      display: block
+    .item
+      h3 
+        margin-top: 30px
+        text-align: left
+        align-items: flex-start
+        +max-SP
+        display: block
+        margin-bottom: 5px
+      .grid
+        margin-top: 10px
+        display: grid
+        grid-template-columns: auto 
+        grid-gap: .75em
+
+
 #map
   margin-top: 100px
   .map
