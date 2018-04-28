@@ -22,11 +22,12 @@ meta(name='robots' content='noindex')
   .list
     .post(v-for='event in events')
       a(:href='event.link', target="_blank")
-        img(:src='event.imageSrc' , :alt='event.title' :style='thumbnailStyle' @load='switchLoadingStyle')
-        img.loading(src='./images/loading-white.svg' :style='loadingStyle')
+        img(:src='event.imageSrc' , :alt='event.title' v-bind:style='thumbnailStyle' @load='switchLoadingStyle')
+        img.loading(src='./images/loading-white.svg' v-bind:style='loadingStyle')
       h3 {{event.title}}
       p(v-HTML='event.desc')
   .error
+    img(src='./images/service-printer.jpg' v-bind:style='errorIconStyle')
     p {{errorMessage}}
 
 #about.section

@@ -8,7 +8,8 @@ const eventVue = new Vue({
     thumbnailStyle: 'display: none',
     loadingStyle: '',
     loadedThumbnails: 0,
-    errorMessage: ''
+    errorMessage: '',
+    errorIconStyle: ''
   },
   methods: {
     switchLoadingStyle: function () {
@@ -44,7 +45,7 @@ const eventVue = new Vue({
         })
       })
       .catch(() => {
-        console.log('err')
+        this.errorIconStyle = 'display: block' // ここにアイコン画像のパスを入れる
         this.errorMessage = 'イベント情報の取得に失敗しました。'
         this.thumbnailStyle = 'display: none'
         this.loadingStyle = 'display: none'
