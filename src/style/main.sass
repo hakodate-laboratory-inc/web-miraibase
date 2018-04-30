@@ -3,11 +3,6 @@
 @import 'base'
 @import 'components'
 
-=center
-  display: flex
-  flex-flow: column
-  align-items: center
-
 #topview
   width: 100vw
   height: 99vh
@@ -141,10 +136,15 @@
     display: flex
     align-items: flex-start
     max-width: 1080px
+    padding: 0 50px
+    +max-SP
+      padding: 0 25px
     +max-SP
       flex-direction: column
       align-items: center
     img
+      max-width: 500px
+      width: 50%
       +max-SP
         width: 90%
 
@@ -153,7 +153,6 @@
       line-height: 2em
       +max-SP
         margin-left: 0
-        width: 90%
     h2
       text-align: left
       +max-SP
@@ -163,7 +162,9 @@
       text-align: justify
 
 #service
-  padding: 50px 0
+  padding: 50px
+  +max-SP
+    padding: 25px
   +center
   h2
     line-height: 1.9em
@@ -175,7 +176,6 @@
     grid-gap: 50px
     +max-SP
      grid-template-columns: 1fr
-     width: 90%
      grid-gap: 10vw 8%
     .item
       +center
