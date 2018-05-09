@@ -43,6 +43,7 @@ const eventVue = new Vue({
     }
   },
   mounted () {
+    // axios.get('http://hakolab.co.jp/api/loadConnpass.cgi')
     axios.get('http://hakolab.co.jp/api/loadConnpassDummy.cgi')
       .then(function (res) {
         res.data.events.sort(function (a, b) {
