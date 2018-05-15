@@ -60,10 +60,10 @@ const eventVue = new Vue({
           eventVue.events[i].link = resEvent.event_url
           eventVue.events[i].startDate = moment(resEvent.started_at).format('YYYY年M月D日(ddd) H:mm')
           eventVue.events[i].desc = /<p>(.+?)<\/p>/g.exec(resEvent.description)[1]
-          eventVue.events[i].status = (diff < 0) ? "終了しました"
-                                    : (0 <= diff && diff <= 1) ? "本日開催"
-                                    : (diff > 1) ? "明日開催"
-                                    : "受付中(的な文字)"
+          eventVue.events[i].status = (diff < 0) ? '終了しました'
+            : (diff >= 0 && diff <= 1) ? '本日開催'
+              : (diff > 1) ? '明日開催'
+                : '受付中(的な文字)'
           axios.get('http://hakolab.co.jp/api/avoidACAO.cgi?url=' + resEvent.event_url)
             .then(function (resres) {
               eventVue.events[i].imageSrc = /background-image:url\((\S*)\)/.exec(resres.data)[1]
