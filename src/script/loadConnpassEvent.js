@@ -52,17 +52,16 @@ const eventVue = new Vue({
           return 0
         })
         res.data.events.forEach((resEvent, i) => {
+          var eventDay = moment(resEvent.started_at)
+          var today = moment().hour(0).minute(0).seconds(0)
+          var diff = eventDay.diff(today, 'days', true)
+
           eventVue.events[i].title = resEvent.title
           eventVue.events[i].link = resEvent.event_url
           eventVue.events[i].startDate = moment(resEvent.started_at).format('YYYY年M月D日(ddd) H:mm')
-
-          var eventDay = moment(resEvent.started_at)
-          var today = moment().hour(0).minute(0).seconds(0)
-          var diff = eventDay.diff(today, 'days' ,true)
-
           eventVue.events[i].desc = /<p>(.+?)<\/p>/g.exec(resEvent.description)[1]
           eventVue.events[i].status = (diff < 0) ? "終了しました"
-                                    : (0<= diff && diff <=1) ? "本日開催"
+                                    : (0 <= diff && diff <= 1) ? "本日開催"
                                     : (diff > 1) ? "明日開催"
                                     : "受付中(的な文字)"
           axios.get('http://hakolab.co.jp/api/avoidACAO.cgi?url=' + resEvent.event_url)
