@@ -25,7 +25,7 @@ meta(name='robots' content='noindex')
       a(v-bind:href='event.link', target="_blank")
         img(v-bind:src='event.imageSrc' , v-bind:alt='event.title' v-bind:style='thumbnailStyle' @load='switchLoadingStyle')
         img.loading(src='./images/loading-white.svg' v-bind:style='loadingStyle')
-      p.eventStatus 開催中
+      p.eventStatus {{event.status}}
       h3 {{event.title}}
       p {{event.startDate}}
       p(v-HTML='event.desc')
