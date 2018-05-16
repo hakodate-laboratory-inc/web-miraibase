@@ -64,6 +64,10 @@ const eventVue = new Vue({
             : (diff >= 0 && diff <= 1) ? '本日開催'
               : (diff > 1) ? '明日開催'
                 : '受付中(的な文字)'
+          eventVue.events[i].statusColor = (diff < 0) ? 'eventStatus-end'
+            : (diff >= 0 && diff <= 1) ? 'eventStatus-today'
+              : (diff > 1) ? 'eventStatus-tommorow'
+                : 'eventStatus-yet'
           axios.get('http://hakolab.co.jp/api/avoidACAO.cgi?url=' + resEvent.event_url)
             .then(function (resres) {
               eventVue.events[i].imageSrc = /background-image:url\((\S*)\)/.exec(resres.data)[1]
