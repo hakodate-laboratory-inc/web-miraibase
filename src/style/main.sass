@@ -259,6 +259,39 @@
         .n
           text-align: right
 
+#reserved
+  +center
+  p.read
+    max-width: 600px
+    width: 80%
+    justify-content: center
+    text-align: justify
+    margin: 25px 0
+    line-height: 1.5em
+
+  .list
+    max-width: 1080px
+    justify-content: center
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-gap: 50px
+    +max-SP
+      display: block
+    .item
+      h3 
+        margin-top: 20px
+        text-align: left
+        align-items: flex-start
+      +max-SP
+        display: block
+        margin-bottom: 40px
+      .grid
+        margin-top: 10px
+        display: grid
+        grid-template-columns: auto 
+        grid-gap: .75em
+
+
 #map
   margin-top: 100px
   .map

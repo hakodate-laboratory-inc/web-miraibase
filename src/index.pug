@@ -14,6 +14,7 @@ meta(name='robots' content='noindex')
 #scrollDown
   - for (let i = 0;i < 4;i++)
     .line
+    
 
 #first.bc-green.section
   h2 直近のイベント
@@ -80,14 +81,14 @@ meta(name='robots' content='noindex')
   h2 PRICE <br> おねだん
   .list
     .item
-      h3 学生の方
+      h3 学生の方のご利用
       .grid
         .h 終日利用
         .n 100円
         .h ソフトドリンク飲み放題
         .n 200円
     .item
-      h3 一般の方
+      h3 一般の方のご利用
       .grid
         .h 30分
         .n 100円
@@ -95,7 +96,37 @@ meta(name='robots' content='noindex')
         .n 500円
         .h ソフトドリンク飲み放題
         .n 200円
-  
+
+#reserved.section
+  h2 部屋の貸し切り利用について
+  p.read  MIRAI BASE内の部屋を、イベントや勉強会等で占有してご利用いただけます。ご利用の際は目的とご利用人数・ご利用時間を予めお知らせください。下記利用料は会場でお支払いください。
+  .list
+    .item
+      img(src='https://placehold.jp/300x180.png?text=300x180')
+      h3 asoviva
+      .grid
+        .h MIRAI BASEのメインスペースです。
+        .h 1時間ごとの利用 : 800円
+        .h 1日占有利用 : 4800円
+        .h 推奨利用人数 : 6~15人
+
+    .item
+      img(src='https://placehold.jp/300x180.png?text=300x180')
+      h3 sigotova
+      .grid
+        .h メインスペースの横にある部屋です。
+        .h 1時間ごとの利用 : 800円
+        .h 1日占有利用 : 4800円
+        .h 推奨利用人数 : 6~15人
+    .item
+      img(src='https://placehold.jp/300x180.png?text=300x180')
+      h3 会議室
+      .grid
+        .h MIRAI BASEの奥にある部屋です。
+        .h 占有時間にかかわらず1800円
+        .h 推奨利用人数 : 1~6人
+
+
 #map.section
   h2 アクセス
   iframe.map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2973.642528536144!2d140.75497011585747!3d41.81446057922727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9ef42ee2a8a8f9%3A0x465635e7d9334cc8!2sMIRAI+BASE!5e0!3m2!1sja!2sjp!4v1519789031434" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
@@ -106,5 +137,5 @@ footer.bc-green.section
   p 070-2679-1920
   p asdfg@asdfgh.asdfg
   p.mtw 営業時間 平日 14:00-20:00
-
+  p 休業日 土曜･日曜･祝日
 script(src='app.js')
