@@ -52,9 +52,9 @@ const eventVue = new Vue({
           return 0
         })
         res.data.events.forEach((resEvent, i) => {
-          var eventDay = moment(resEvent.started_at)
-          var today = moment().hour(0).minute(0).seconds(0)
-          var diff = eventDay.diff(today, 'days', true)
+          const eventDay = moment(resEvent.started_at)
+          const today = moment().hour(0).minute(0).seconds(0)
+          const diff = eventDay.diff(today, 'days', true)
 
           eventVue.events[i].title = resEvent.title
           eventVue.events[i].link = resEvent.event_url
