@@ -185,14 +185,15 @@
         display: block
       .item
         margin-bottom: 30px
-        p
-          line-height: 1.5em
-          margin-top: 10px
         img
           width: 100%
         h3
-          margin-top: 10px
+          margin-top: 20px
           text-align: left
+        p
+          text-align: justify
+          line-height: 1.5em
+          margin-top: 10px
 #service
   padding: 50px
   +max-SP
@@ -267,7 +268,15 @@
         .u
           font-weight: bold
           width: 100%
-
+#reserved
+  +center
+  p.read
+    max-width: 600px
+    width: 80%
+    justify-content: center
+    text-align: justify
+    margin: 25px 0
+    line-height: 1.5em
 
 #map
   margin-top: 100px
