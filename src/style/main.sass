@@ -58,15 +58,34 @@
         margin-bottom: 30px
       img, a
         width: 100%
-      p.eventStatus
+      h3
+        margin-top: 15px
+        text-align: left
+      p
+        text-align: justify
+        line-height: 1.5em
+        font-weight: 100
+      .eventDate
+        margin-top: 10px
+      .eventDesc
+        margin-top: 5px
+      .eventStatus
         color: #fff
-        background-color: #d13934
         width: 100%
         box-sizing: border-box
         font-size: .9em
         font-weight: bolder
         padding-left: 10px
         margin: 5px 0
+        line-height: 1.75em
+      .eventStatus-end
+        background-color: #999
+      .eventStatus-today
+        background-color: #cc3f3f
+      .eventStatus-tommorow
+        background-color: #e57104
+      .eventStatus-yet
+        background-color: #ba7a1a
       a
         $listMaxWidth: 1080px
         $listGridGap: 50px
@@ -127,15 +146,6 @@
               transform: rotate(0deg)
             100%
               transform: rotate(360deg)
-      h3
-        margin-top: 30px
-        text-align: left
-      p
-        margin-top: 10px
-        text-align: justify
-        line-height: 1.5em
-        font-weight: 100
-
 #about
   +center
   h3
