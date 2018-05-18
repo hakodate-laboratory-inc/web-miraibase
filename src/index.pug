@@ -27,8 +27,8 @@ meta(name='robots' content='noindex')
         img.loading(src='./images/loading-white.svg' v-bind:style='loadingStyle')
       p.eventStatus(v-bind:class="event.statusColor") {{ event.status }}
       h3 {{event.title}}
-      p {{event.startDate}}
-      p(v-HTML='event.desc')
+      p.eventDate {{event.startDate}}
+      p.eventDesc(v-HTML='event.desc')
 
 #about.section
   h3 MIRAI BASEへようこそ
