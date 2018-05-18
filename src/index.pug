@@ -12,7 +12,7 @@ meta(name='robots' content='noindex')
   p 経験の芽を育てる土壌
 
 #scrollDown
-  - for (let i = 0;i < 4;i++)
+  - for (let i = 0;i < 4;i++);
     .line
 
 #first.bc-green.section
@@ -34,12 +34,19 @@ meta(name='robots' content='noindex')
 #about.section
   h3 MIRAI BASEへようこそ
   .content
-    img(src='https://placehold.jp/500x300.png?text=500x300')
     .text
       h2 函館で頑張るみんなの基地を目指して
       p 個人的な作業やグループでの作業の場にしたり、共通の技術を用いる仲間とのコミュニケーションを行ったり、実際にものづくりをして経験を積んでみたり。MIRAI BASEは、現在函館で多方面に活躍する方たちや、これから活躍していく方たちの活動拠点となるための共同作業場です。
       p 電源、無線LANなどの各種インフラに加え、プリンタ/スキャナ、ディスプレイやプロジェクター、また事務用品、会議室など、複数人で利用可能な設備もご用意しております。
-
+    .room
+      .item
+        img(src="https://placehold.jp/320x180.png", alt="")
+        h3 asoviva - MIRAIABSEのメインスペース
+        p 本コワーキングスペースのメインスペースで、比較的賑やかな雰囲気を許容して作業する場所。グループで開発したり、オフィスの人が仕事をしていたり、誰かがカウンターで談笑していたりします。
+      .item
+        img(src="https://placehold.jp/320x180.png", alt="")
+        h3 sigotova - MIRAIBASEのサブスペース
+        p メインスペースとは扉で区切られた部屋で、個人や少数で集中して作業に取り組める場所です。学校の課題に向かったり、書類仕事を行ったり、ゆっくりと動画や画像を眺めたりといった使い方をしていただいてます。
 #service.bc-green.section
   h2 SERVICE <br> せつび・できること
   .list
@@ -77,25 +84,43 @@ meta(name='robots' content='noindex')
       p 飲食物のお持込の際にご利用ください。
 
 #price.section
-  h2 PRICE <br> おねだん
+  h2 MRIAIBASEをご利用の際の料金
   .list
     .item
-      h3 学生の方
+      h3 ドロップイン
       .grid
+        h4.u 学生
+        .brank
+        .h 二時間利用
+        .n 100円
         .h 終日利用
-        .n 100円
-        .h ソフトドリンク飲み放題
         .n 200円
-    .item
-      h3 一般の方
-      .grid
-        .h 30分
-        .n 100円
+        h4.u 一般
+        .brank
+        .h 二時間利用
+        .n 200円
         .h 終日利用
         .n 500円
-        .h ソフトドリンク飲み放題
-        .n 200円
-  
+    .item
+      h3 部屋の貸切
+      .grid
+        h4.u asoviva
+        .brank
+        .h 一時間ごと
+        .n 800円
+        .h 終日貸切
+        .n 4800円
+        h4.u sigitova
+        .brank
+        .h 一時間ごと
+        .n 800円
+        .h 終日貸切
+        .n 4800円
+        h4.u 会議室
+        .brank
+        .h 時間にかかわらず
+        .n 1800円
+
 #map.section
   h2 アクセス
   iframe.map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2973.642528536144!2d140.75497011585747!3d41.81446057922727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9ef42ee2a8a8f9%3A0x465635e7d9334cc8!2sMIRAI+BASE!5e0!3m2!1sja!2sjp!4v1519789031434" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)

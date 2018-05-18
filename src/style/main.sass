@@ -159,34 +159,41 @@
     margin: 15px 0
   .content
     margin-top: 30px
-    display: flex
-    align-items: flex-start
-    max-width: 1080px
     padding: 0 50px
     +max-SP
       padding: 0 25px
     +max-SP
       flex-direction: column
       align-items: center
-    img
-      max-width: 500px
-      width: 50%
-      +max-SP
-        width: 90%
-
     .text
-      margin-left: 40px
+      margin: 0 auto
+      max-width: 700px
       line-height: 2em
       +max-SP
         margin-left: 0
-    h2
-      text-align: left
-      +max-SP
         font-size: 19px
         margin: 5px 0
-    p
-      text-align: justify
-
+      p
+        text-align: justify
+    .room
+      max-width: 1000px
+      margin-top: 20px
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 25px
+      +max-SP
+        display: flex
+        flex-direction: column
+        align-items: center
+      .item
+        img
+          width: 100%
+        h3
+          margin-top: 10px
+          text-align: left
+        p　
+          line-height: 1.5em
+          margin-top: 10px
 #service
   padding: 50px
   +max-SP
@@ -258,6 +265,10 @@
         grid-gap: .75em
         .n
           text-align: right
+        .u
+          font-weight: bold
+          width: 100%
+
 
 #map
   margin-top: 100px
