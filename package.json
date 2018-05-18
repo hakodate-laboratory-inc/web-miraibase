@@ -9,11 +9,12 @@
     "babel-eslint": "^8.2.2",
     "eslint": "^4.18.1",
     "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-html": "^4.0.2",
+    "eslint-plugin-html": "^4.0.3",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
+    "moment": "^2.22.0",
     "node-mandrill": "^1.0.1",
     "node-sass": "^4.7.2",
     "parcel-bundler": "^1.6.2",
@@ -26,6 +27,7 @@
   "scripts": {
     "dev": "parcel src/index.pug",
     "build": "parcel src/index.pug --public-url ./ -d build",
-    "github-build": "parcel build src/index.pug --public-url ./ -d docs"
+    "github-build": "parcel build src/index.pug --public-url ./ -d docs",
+    "lint": "eslint src/"
   }
 }
