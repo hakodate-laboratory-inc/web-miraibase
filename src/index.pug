@@ -16,7 +16,7 @@ meta(name='robots' content='noindex')
     .line
 
 #first.bc-green.section
-  h2 MIRAI BASEで最近起こったイベント
+  h2 直近のイベント
 
 #event.bc-green.section
   .list
@@ -24,10 +24,11 @@ meta(name='robots' content='noindex')
       a(:href='event.link', target="_blank")
         img(:src='event.imageSrc' , :alt='event.title' v-bind:style='thumbnailStyle' @load='switchLoadingStyle')
         img.loading(src='./images/loading-white.svg' v-bind:style='loadingStyle')
+      p.eventStatus(v-bind:class="event.statusColor") {{ event.status }}
       h3 {{event.title}}
+      p.eventDate {{event.startDate}}
       p(v-HTML='event.desc')
   .error
-    img(src='./images/service-printer.jpg' v-bind:style='errorIconStyle')
     p {{errorMessage}}
 
 #about.section
