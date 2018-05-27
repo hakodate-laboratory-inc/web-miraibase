@@ -29,9 +29,9 @@
 #first
   margin-top: 5px
   display: flex
+  align-items: center
   +max-SP
     flex-direction: column
-  align-items: center
   h2
     margin-top: 30px
 
@@ -177,19 +177,20 @@
       p
         text-align: justify
     .room
-      max-width: 700px
-      margin-top: 20px
-      display: grid
-      grid-template-columns: 1fr 1fr
-      grid-gap: 25px
+      max-width: 1080px
+      margin-top: 40px
       +max-SP
         display: block
       .item
         margin-bottom: 30px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: auto auto 1fr
+        grid-gap: 0 1em
         img
           width: 100%
+          grid-row: 1 / 4
         h3
-          margin-top: 20px
           text-align: left
         p
           text-align: justify
