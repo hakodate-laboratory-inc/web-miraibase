@@ -29,9 +29,9 @@
 #first
   margin-top: 5px
   display: flex
+  align-items: center
   +max-SP
     flex-direction: column
-  align-items: center
   h2
     margin-top: 30px
 
@@ -40,6 +40,7 @@
   padding: 30px
   +center
   h2
+    margin-bottom: 30px
   +max-SP
     padding: 25px
     margin-top: 0px
@@ -154,45 +155,59 @@
       text-align: center
       line-height: 1.5em
 #about
+  h2
+    margin-bottom: 30px
   +center
-  h3
-    margin: 15px 0
   .content
-    margin-top: 30px
-    display: flex
-    align-items: flex-start
-    max-width: 1080px
     padding: 0 50px
     +max-SP
       padding: 0 25px
     +max-SP
       flex-direction: column
       align-items: center
-    img
-      max-width: 500px
-      width: 50%
-      +max-SP
-        width: 90%
-
     .text
-      margin-left: 40px
+      margin: 0px auto 20px auto
+      max-width: 700px
       line-height: 2em
-      +max-SP
-        margin-left: 0
-    h2
-      text-align: left
       +max-SP
         font-size: 19px
         margin: 5px 0
-    p
-      text-align: justify
-
+      h3
+        margin-bottom: 10px
+      p
+        text-align: justify
+    .room
+      max-width: 1080px
+      margin-top: 40px
+      +max-SP
+        display: block
+      .item
+        margin-bottom: 30px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: auto auto 1fr
+        +max-SP
+          display: block
+          margin-bottom: 40px
+        grid-gap: 0 1em
+        img
+          width: 100%
+          grid-row: 1 / 4
+        h3
+          text-align: left
+          +max-SP
+            margin-top: 10px
+        p
+          text-align: justify
+          line-height: 1.5em
+          margin-top: 10px
 #service
   padding: 50px
   +max-SP
     padding: 25px
   +center
   h2
+    margin-bottom: 30px
     line-height: 1.9em
   .list
     max-width: 1080px
@@ -210,7 +225,7 @@
         width: 100%
         border-radius: 25%//丸くしてるのこれ　消せば四角
       h3
-        margin-top: 30px
+        margin-top: 25px
         text-align: left
       p
         margin-top: 10px
@@ -235,8 +250,9 @@
           margin-top: 0px
 
 #price
+  h2
+    margin-bottom: 30px
   .list
-    margin-top: 50px
     display: flex
     +max-SP
      flex-direction: column
@@ -252,12 +268,29 @@
         line-height: 2.5em
         font-weight: 500
       .grid
-        margin-top: 30px
+        margin-top: 10px
         display: grid
         grid-template-columns: auto auto
         grid-gap: .75em
-        .n
+        .plan
+          text-align: left
+        .pay
           text-align: right
+
+        h4
+          grid-column: 1 / 3
+          font-weight: bold
+          width: 100%
+          margin-top: 10px
+#reserved
+  +center
+  p
+    max-width: 700px
+    width: 80%
+    justify-content: center
+    text-align: justify
+    margin: 25px 0 0 0
+    line-height: 1.5em
 
 #map
   margin-top: 100px

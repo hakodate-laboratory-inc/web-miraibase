@@ -12,7 +12,7 @@ meta(name='robots' content='noindex')
   p 経験の芽を育てる土壌
 
 #scrollDown
-  - for (let i = 0;i < 4;i++)
+  - for (let i = 0;i < 4;i++)//セミコロンつけたらsublimeのハイライトが治ったけどfor分ちゃんと動いてないっぽいので最後に外す
     .line
 
 #first.bc-green.section
@@ -32,21 +32,29 @@ meta(name='robots' content='noindex')
     p {{errorMessage}}
 
 #about.section
-  h3 MIRAI BASEへようこそ
+  h2 函館で頑張るみんなの基地をめざして
   .content
-    img(src='https://placehold.jp/500x300.png?text=500x300')
     .text
-      h2 函館で頑張るみんなの基地を目指して
       p 個人的な作業やグループでの作業の場にしたり、共通の技術を用いる仲間とのコミュニケーションを行ったり、実際にものづくりをして経験を積んでみたり。MIRAI BASEは、現在函館で多方面に活躍する方たちや、これから活躍していく方たちの活動拠点となるための共同作業場です。
       p 電源、無線LANなどの各種インフラに加え、プリンタ/スキャナ、ディスプレイやプロジェクター、また事務用品、会議室など、複数人で利用可能な設備もご用意しております。
-
+    .room
+      .item
+        img(src="./images/asoviva.jpg", alt="")
+        h3 asoviva - ラフな作業場
+        p 本コワーキングスペースのメインスペースで、比較的賑やかな雰囲気を許容して作業する場所。グループで開発したり、オフィスの人が仕事をしていたり、誰かがカウンターで談笑していたりします。(仮)
+        p 収容可能人数:20人(仮)
+      .item
+        img(src="https://placehold.jp/300x170.png", alt="")
+        h3 sigotova - 静かな作業場
+        p メインスペースとは扉で区切られた部屋で、個人や少数で集中して作業に取り組める場所です。学校の課題に向かったり、書類仕事を行ったり、ゆっくりと動画や画像を眺めたりといった使い方をしていただいてます。(仮)
+        p 収容可能人数:20人(仮)
 #service.bc-green.section
-  h2 SERVICE <br> せつび・できること
+  h2 MIRAIBASEで利用可能な設備
   .list
     .item
       img(src="./images/service-microwave.jpg", alt="")
-      h3 ソフトドリンク利用
-      p 作業の合間にご利用いただけます。詳しくは料金についてをご覧ください。飲料等の持参も可能です。
+      h3 ソフトドリンク販売
+      p 作業の合間にご利用いただけます。詳しくは料金についてをご覧ください。ご自身での飲料の持参も可能です。
     .item
       img(src="./images/service-microwave.jpg", alt="")
       h3 無線LAN
@@ -77,24 +85,41 @@ meta(name='robots' content='noindex')
       p 飲食物のお持込の際にご利用ください。
 
 #price.section
-  h2 PRICE <br> おねだん
+  h2 MRIAIBASEをご利用の際の料金
   .list
     .item
-      h3 学生の方
+      h3 ドロップイン
       .grid
-        .h 終日利用
-        .n 100円
-        .h ソフトドリンク飲み放題
-        .n 200円
+        h4 学生
+        .plan 二時間利用
+        .pay 100円
+        .plan 終日利用
+        .pay 200円
+        h4 一般
+        .plan 二時間利用
+        .pay 200円
+        .plan 終日利用
+        .pay 500円
     .item
-      h3 一般の方
+      h3 部屋の貸切
       .grid
-        .h 30分
-        .n 100円
-        .h 終日利用
-        .n 500円
-        .h ソフトドリンク飲み放題
-        .n 200円
+        h4 asoviva
+        .plan 一時間ごと
+        .pay 800円
+        .plan 終日貸切
+        .pay 4800円
+        h4 sigitova
+        .plan 一時間ごと
+        .pay 800円
+        .plan 終日貸切
+        .pay 4800円
+        h4 会議室
+        .plan 時間にかかわらず
+        .pay 1800円
+#reserved.section
+  h2 部屋の貸し切り利用について
+  p MIRAI BASE内の部屋を、イベントや勉強会等で占有してご利用いただけます。ご利用の際は目的とご利用人数・ご利用時間を予めお知らせください。上記利用料は会場でお支払いいただきます。
+  p なお、部屋の貸切利用料にはMIRAI BASEの通常利用料が含まれております。ご不明な点がございましたらお問い合わせください。
   
 #map.section
   h2 アクセス
