@@ -25,7 +25,7 @@
     "vue": "^2.5.16"
   },
   "scripts": {
-    "dev": "parcel src/index.pug",
+    "dev": "parcel src/index.pug --open",
     "build": "parcel build src/index.pug --public-url ./ -d build",
     "github-build": "parcel build src/index.pug --public-url ./ -d docs",
     "lint": "eslint src/"
