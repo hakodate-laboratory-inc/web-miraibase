@@ -26,7 +26,7 @@
   },
   "scripts": {
     "dev": "parcel src/index.pug",
-    "build": "parcel src/index.pug --public-url ./ -d build",
+    "build": "parcel build src/index.pug --public-url ./ -d build",
     "github-build": "parcel build src/index.pug --public-url ./ -d docs",
     "lint": "eslint src/"
   }
