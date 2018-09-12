@@ -37,7 +37,7 @@ meta(name='twitter:text:title' content='コワーキングスペース MIRAI BAS
     .post(v-for='event in events')
       a(:href='event.link', target="_blank")
         img(:src='event.imageSrc' , :alt='event.title' v-bind:style='thumbnailStyle' @load='switchLoadingStyle')
-        img.loading(src='./images/loading-white.svg' v-bind:style='loadingStyle')
+        img.loading(src='./images/loading-white.svg' v-bind:style='loadingStyle' alt='loading')
       p.eventStatus(v-bind:class="event.statusColor") {{ event.status }}
       h3 {{event.title}}
       p.eventDate {{event.startDate}}
@@ -54,12 +54,12 @@ meta(name='twitter:text:title' content='コワーキングスペース MIRAI BAS
       p 電源、無線LANなどの各種インフラに加え、プリンタやディスプレイ、プロジェクターなどの機材、また事務用品、会議室など、複数人で利用可能な設備もご用意しております。
     .room
       .item
-        img(src="./images/asoviva.jpg", alt="")
+        img(src="./images/asoviva.jpg", alt="asoviva")
         h3 asoviva - ラフな作業場
         p コミュニケーションを取りながら作業できる空間。グループで相談しながら開発を行ったり、少人数で打ち合わせをしたりといった形でご利用いただけます。
         p 利用可能人数:20人
       .item
-        img(src="./images/dummy.png", alt="")
+        img(src="./images/dummy.png", alt="sigotova")
         h3 sigotova - 静かな作業場
         p 静かに集中して作業できる空間。個人の課題に集中したり、書類仕事を行ったりと、なにかに邪魔されたくない作業ができる部屋です。
         p 利用可能人数:20人
@@ -67,35 +67,35 @@ meta(name='twitter:text:title' content='コワーキングスペース MIRAI BAS
   h2 サービス / 設備
   .list
     .item
-      img(src="./images/service-drink.svg", alt="")
+      img(src="./images/service-drink.svg", alt="ソフトドリンク販売")
       h3 ソフトドリンク販売
       p 格安でドリンクを提供しております。お越しの際にメニューをご確認ください。
     .item
-      img(src="./images/service-wifi.svg", alt="")
+      img(src="./images/service-wifi.svg", alt="無線LAN")
       h3 無線LAN
       p 利用者専用のWi-Fiをご用意しております。パスワードはお越しの際にご確認ください。
     .item
-      img(src="./images/service-printer.jpg", alt="")
+      img(src="./images/service-printer.jpg", alt="プリンタ, スキャナ")
       h3 プリンタ&amp;スキャナ
       p Wi-Fi経由で印刷, スキャンが可能です。使用できる紙のサイズはA4, A3, B4, B3です。
     .item
-      img(src="./images/service-dengen.jpg", alt="")
+      img(src="./images/service-dengen.jpg", alt="電源")
       h3 電源
       p 各所にご用意しております。混雑している際は譲り合ってご利用ください。
     .item
-      img(src="./images/service-projector.jpg", alt="")
+      img(src="./images/service-projector.jpg", alt="プロジェクター")
       h3 プロジェクター
       p イベントや会議の際にご利用いただけます。詳しくはスタッフまでお声がけください。
     .item
-      img(src="./images/service-whiteboard.jpg", alt="")
+      img(src="./images/service-whiteboard.jpg", alt="ホワイトボード")
       h3 ホワイトボード
       p 一人でも複数人でもご利用いただけます。小さいサイズもご用意しております。
     .item
-      img(src="./images/service-meetingRoom.jpg", alt="")
+      img(src="./images/service-meetingRoom.jpg", alt="会議室")
       h3 会議室
       p 一時間ごとに利用枠を設けております。ご利用の際は受付にてお申込みください。
     .item
-      img(src="./images/service-microwave.jpg", alt="")
+      img(src="./images/service-microwave.jpg", alt="電子レンジ")
       h3 電子レンジ
       p あたためますか？
 
