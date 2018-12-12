@@ -27,7 +27,7 @@ meta(name='twitter:text:title' content='コワーキングスペース MIRAI BAS
 
 #scrollDown
   - for (let i = 0;i < 4;i++)
-    .line
+    .line 
 
 #first.bc-green.section
   h2 直近のイベント
@@ -140,6 +140,29 @@ meta(name='twitter:text:title' content='コワーキングスペース MIRAI BAS
   h2 アクセス
   iframe.map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2973.642528536144!2d140.75497011585747!3d41.81446057922727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9ef42ee2a8a8f9%3A0x465635e7d9334cc8!2sMIRAI+BASE!5e0!3m2!1sja!2sjp!4v1519789031434" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
 
+#contact.section
+  h2 MIRAI BASEへのお問い合わせ
+  .informations
+    .list
+      .item
+        img.mail(src="./images/contact-mail.svg", alt="")
+        p very-long-e-mail@addres.com
+      .item
+        img.phone(src="./images/contact-phone.svg", alt="")
+        p 00a0-000-00
+      .item
+        img.twitter(src="./images/contact-tw.svg", alt="")
+        p @mirai_base
+    .announce
+      .open
+        .h3 営業時間
+        p 平日14:00から20:00まで
+      .close
+        .h3 休業日
+        p 土日・祝日
+      .exception
+        p 天候などにより営業時間が変動する場合がございます。営業状態または延長・短縮営業のご確認の際には <a href='https://twitter.com/mirai_base'> MIRAIBASEのTwitterアカウント</a> をご確認ください。
+
 footer.bc-green.section
   img(src="./images/mb-logo-horizontal-white.svg", alt="")
   p 〒041-0806 北海道函館市 美原２丁目７−２１ 万勝ビル１F
@@ -150,3 +173,11 @@ footer.bc-green.section
     | をご確認ください。
 
 script(src='app.js')
+
+script.
+  !function(){var x=document.createElement("script");x.src="http://localhost:3000/chat.js",x.type="text/javascript",x.async="true",x.onload=x.onreadystatechange=function(){var x=this.readyState;if(!x||"complete"==x||"loaded"==x)try{ 
+
+   _slaask.init("532f2cc64d24bc01dc4e6e0c7ebf205e"); 
+
+  }catch(x){}};var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(x,t)}(); 
+
