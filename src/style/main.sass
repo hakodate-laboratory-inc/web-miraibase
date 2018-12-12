@@ -314,11 +314,12 @@
     .list
       width: 45%
       +max-SP
-        width: 80%
-      margin: 20px auto
+        width: 100%  
+      margin: 20px 0
       .item
         display: grid
-        grid-template-columns: 60px 1fr
+        width: 100%
+        grid-template-columns: 40px 1fr
         grid-gap: 10px
         margin-bottom: 10px
         p
@@ -340,7 +341,7 @@
       margin: 20px auto
       width: 45%
       +max-SP
-        width: 80%
+        width: 100%
         margin-top: 40px
       .open
         margin: 10px 0
@@ -356,9 +357,6 @@
           &:hover
             color: lighten($green, 10%)
           text-decoration: none
-
-
-    
 
 footer
   display: flex
