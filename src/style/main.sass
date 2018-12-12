@@ -304,18 +304,28 @@
     width: 100vw
 
 #contact
+  a
+    transition: .25s
+    &:link
+      color: $green
+    &:visited
+      color: $green
+    &:hover
+      color: lighten($green, 10%)
+    text-decoration: none
   margin-top: 100px
   .informations
     display: flex
+    justify-content: space-between
     +max-SP
       display: block
-    width: 80%
+    width: 70%
     margin: 0 auto
     .list
       width: 45%
       +max-SP
         width: 100%  
-      margin: 20px 0
+      margin: 20px 0 20px 0px
       .item
         display: grid
         width: 100%
@@ -324,6 +334,8 @@
         margin-bottom: 10px
         p
           display: block
+          line-height: 50px
+        a
           line-height: 50px
         .mail
           width: 35px
@@ -337,8 +349,12 @@
           width: 40px
           height: auto
           margin: auto
+        .facebook
+          width: 40px
+          height: auto
+          margin: auto
     .announce
-      margin: 20px auto
+      margin: 20px 0
       width: 45%
       +max-SP
         width: 100%
