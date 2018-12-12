@@ -228,21 +228,6 @@ title Saving money, saving bytes
 p Qed.
 ```
 
-#### スタイルシートとスクリプトの属性の省略
-typeは自動認識されるため記述しない。
-
-```pug
-// 非推奨
-link( rel="stylesheet" href="style.css"
-  type="text/css")
-script(src="smoothscroll.js"
-  type="text/javascript")
-
-// 推奨
-link(rel="stylesheet" href="style.css")
-script(src="smoothscroll.js")
-```
-
 ## CSS
 
 #### プロパティ記述の際のスペース
