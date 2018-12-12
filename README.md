@@ -33,10 +33,5 @@ $ npm run build
 ftpでよしなに。
 buildフォルダの中身を全部投げる。
 
-## 開発環境の根拠
-未記述
-## 使用技術について
-未記述
-
-## Target Visual(v2)
-![v02](https://user-images.githubusercontent.com/9881744/37420442-22ffa112-27fa-11e8-86b5-66563558c1b3.png)
+## Visual
+![screencapture-miraibase-jp-2018-12-11-23_21_47](https://user-images.githubusercontent.com/9881744/49806675-b7c99600-fd9b-11e8-9118-48f87c390bd5.png)
