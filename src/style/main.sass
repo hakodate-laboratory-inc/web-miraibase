@@ -346,6 +346,19 @@
         margin: 10px 0
       .close
         margin: 10px 0
+      .exception
+        a
+          transition: .25s
+          &:link
+            color: $green
+          &:visited
+            color: $green
+          +max-PC
+            &:hover
+              color: lighten($green, 10%)
+          text-decoration: none
+
+
     
 
 footer
