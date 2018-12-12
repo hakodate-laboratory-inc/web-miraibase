@@ -307,17 +307,20 @@
   margin-top: 100px
   .informations
     display: flex
+    +max-SP
+      display: block
     width: 90%
     margin: 0 auto
     .list
       width: 45%
-      margin: 0 auto
+      +max-SP
+        width: 80%
+      margin: 20px auto
       .item
-        //width: 30%
         display: grid
         grid-template-columns: 60px 1fr
         grid-gap: 10px
-        margin: 10px 0
+        margin-bottom: 10px
         p
           display: block
           line-height: 50px
@@ -334,8 +337,11 @@
           height: auto
           margin: auto
     .announce
-      margin: 20px 0
+      margin: 20px auto
       width: 45%
+      +max-SP
+        width: 80%
+        margin-top: 40px
       .open
         margin: 10px 0
       .close
