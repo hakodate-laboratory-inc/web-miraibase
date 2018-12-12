@@ -95,6 +95,7 @@
         height: calc(((100vw - 100px - #{$listGridGap} * 2) / 3) * (9 / 16))
         max-height: (($listMaxWidth - $listGridGap * 2) / 3 ) * (9 / 16)
         position: relative
+        background-color: darken($green, 10%)
         +max-SP
           height: calc((100vw * (9 / 16))
           max-height: 600px
@@ -134,8 +135,6 @@
           transition: .4s
           filter: brightness(100%)
           z-index: 10
-          object-fit: cover
-          width: 100%
         .loading
           z-index: 0
           opacity: .9
