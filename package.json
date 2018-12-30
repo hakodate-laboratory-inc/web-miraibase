@@ -16,17 +16,19 @@
     "eslint-plugin-standard": "^4.0.0",
     "moment": "^2.23.0",
     "node-mandrill": "^1.0.1",
-    "node-sass": "^4.11.0",
-    "parcel-bundler": "^1.10.3",
-    "parcel-plugin-imagemin": "^2.1.1",
+    "parcel-bundler": "^1.6.2",
+    "parcel-plugin-imagemin": "^1.0.2",
     "pug": "^2.0.3",
-    "sweet-scroll": "^3.0.1",
-    "vue": "^2.5.21"
+    "sass": "^1.15.2",
+    "sweet-scroll": "^3.0.0",
+    "vue": "^2.5.16"
   },
   "scripts": {
     "dev": "parcel src/index.pug --open",
     "build": "npm run lint; rm -R build; parcel build src/index.pug --public-url ./ -d build; open build",
     "github-build": "parcel build src/index.pug --public-url ./ -d docs",
     "lint": "eslint src/"
+  },
+  "devDependencies": {
   }
 }
