@@ -96,7 +96,7 @@
         max-height: (($listMaxWidth - $listGridGap * 2) / 3 ) * (9 / 16)
         position: relative
         +max-SP
-          height: calc((100vw * (9 / 16))
+          height: calc((100vw * (9 / 16)))
           max-height: 600px
         transition: .2s
         &::after, &::before // for hover animation
@@ -317,10 +317,12 @@
   .informations
     display: flex
     justify-content: space-between
-    +max-SP
-      display: block
     width: 70%
     margin: 0 auto
+
+    +max-SP
+      display: block
+      width: 80%
     .list
       width: 45%
       +max-SP
