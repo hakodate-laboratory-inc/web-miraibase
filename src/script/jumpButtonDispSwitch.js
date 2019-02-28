@@ -8,8 +8,7 @@ function DisplaySwitch(){
   if(y > 680 && !mediaQuery.matches){
     el.style.opacity = "1"
     el.style.bottom = "-100px"
-  }
-  else{
+  } else{
     el.style.opacity = "0"
     el.style.bottom = "-200px"
   }
