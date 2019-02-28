@@ -30,6 +30,5 @@
     "lint": "eslint src/",
     "deploy": "npm run build; git add .; git commit -m 'deploy'; git push"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
