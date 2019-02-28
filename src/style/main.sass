@@ -18,8 +18,10 @@
   right: -100px
   bottom: -100px
   mix-blend-mode: multiply
+  cursor: auto
+  opacity: 0
   +max-SP
-    visibility: hidden
+    opacity: 0
   .toTop
     position: relative
     display: block
@@ -30,20 +32,17 @@
       text-decoration: none
       display: block
       color: white
+      font-weight: bold
       text-align: center
       line-height: 80px
       width: 100%
       height: 100%
-    span
-      position: absolute
-      transform: rotate(0deg)
-      color: blue
-      font-size: 20px
   &:hover
     mix-blend-mode: normal
     background-color: #fff
     border: solid 2px #009544
     box-sizing: border-box
+    cursor: none
     a
       color: #009544
 
