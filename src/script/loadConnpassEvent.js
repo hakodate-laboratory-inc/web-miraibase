@@ -2,7 +2,7 @@ import Vue from 'vue/dist/vue.js'
 import axios from 'axios'
 import 'moment/src/locale/ja'
 import moment from 'moment'
-import errImg from './../images/dummy.png'
+// import errImg from './../images/err.jpg'
 
 const eventVue = new Vue({
   el: '#event',
@@ -71,7 +71,7 @@ const eventVue = new Vue({
             })
             .catch(function (err) {
               if (err) {
-                eventVue.events[i].imageSrc = errImg
+                eventVue.events[i].imageSrc = 'http://miraibase.jp/err.jpg'
               }
             })
         })
