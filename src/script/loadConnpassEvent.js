@@ -57,9 +57,19 @@ const eventVue = new Vue({
             eventVue.events[i].status = '受付中（詳細はリンク先をご確認ください）'
             eventVue.events[i].statusColor = 'eventStatus-yet'
           }
-          axios.get('http://hakolab.co.jp/api/avoidACAO.cgi?url=' + resEvent.event_url)
-            .then(function (resres) {
-              eventVue.events[i].imageSrc = /background-image:url\((\S*)\)/.exec(resres.data)[1]
+          axios({
+            method: 'GET',
+            url: 'http://hakolab.co.jp/api/avoidACAO.cgi?url=' + resEvent.event_url,
+            validateStatus: function (status) {
+              return status < 500
+            }
+          })
+            .then(function (res2) {
+              eventVue.events[i].imageSrc = /background-image:url\((\S*)\)/.exec(res2.data)[1]
+              eventVue.switchLoadingStyle()
+            })
+            .catch(function (err) {
+              if (err) {}
             })
         })
       })
