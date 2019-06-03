@@ -3,6 +3,49 @@
 @import 'base'
 @import 'components'
 
+#jump
+  z-index: 11
+  transform: rotate(-45deg)
+  -webkit-transform: rotate(-45deg)
+  -moz-transform: rotate(-45deg)
+  -o-transform: rotate(-45deg)
+  transition: 250ms
+  width: 200px
+  height: 200px
+  background-color: #009544
+  display: block
+  position: fixed
+  right: -100px
+  bottom: -100px
+  mix-blend-mode: multiply
+  cursor: auto
+  opacity: 0
+  +max-SP
+    opacity: 0
+  .toTop
+    position: relative
+    display: block
+    width: 100%
+    height: 100%
+    margin: 0 auto
+    a
+      text-decoration: none
+      display: block
+      color: white
+      font-weight: bold
+      text-align: center
+      line-height: 80px
+      width: 100%
+      height: 100%
+  &:hover
+    mix-blend-mode: normal
+    background-color: #fff
+    border: solid 2px #009544
+    box-sizing: border-box
+    cursor: none
+    a
+      color: #009544
+
 #topview
   width: 100vw
   height: 99vh
@@ -95,6 +138,7 @@
         height: calc(((100vw - 100px - #{$listGridGap} * 2) / 3) * (9 / 16))
         max-height: (($listMaxWidth - $listGridGap * 2) / 3 ) * (9 / 16)
         position: relative
+        background-color: darken($green, 10%)
         +max-SP
           height: calc((100vw * (9 / 16)))
           max-height: 600px
@@ -156,12 +200,12 @@
       line-height: 1.5em
 #about
   h2
-    margin-bottom: 30px
+    margin: 0 30px 30px
   +center
+  padding: 0 50px
+  +max-SP
+    padding: 0 25px
   .content
-    padding: 0 50px
-    +max-SP
-      padding: 0 25px
     +max-SP
       flex-direction: column
       align-items: center

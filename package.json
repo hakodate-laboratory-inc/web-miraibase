@@ -6,21 +6,20 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-    "babel-eslint": "^8.2.2",
-    "eslint": "^4.18.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-html": "^4.0.3",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "moment": "^2.22.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.10.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-html": "^5.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "moment": "^2.23.0",
     "node-mandrill": "^1.0.1",
-    "node-sass": "^4.7.2",
     "parcel-bundler": "^1.6.2",
     "parcel-plugin-imagemin": "^1.0.2",
-    "parcel-plugin-pug": "^0.3.1",
-    "pug": "^2.0.1",
+    "pug": "^2.0.3",
+    "sass": "^1.15.2",
     "sweet-scroll": "^3.0.0",
     "vue": "^2.5.16"
   },
@@ -28,6 +27,8 @@
     "dev": "parcel src/index.pug --open",
     "build": "npm run lint; rm -R build; parcel build src/index.pug --public-url ./ -d build; open build",
     "github-build": "parcel build src/index.pug --public-url ./ -d docs",
-    "lint": "eslint src/"
-  }
+    "lint": "eslint src/",
+    "deploy": "npm run build; git add .; git commit -m 'deploy'; git push"
+  },
+  "devDependencies": {}
 }
