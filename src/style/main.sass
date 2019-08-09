@@ -78,6 +78,36 @@
   h2
     margin-top: 30px
 
+#news
+  padding: 0 30px
+  text-align: center
+  .announcement
+    display: inline-block
+    margin: 20px auto
+    padding: 10px 20px
+    border: 1px solid $green
+    .overview
+      margin-bottom: 20px
+    .strong
+      font-weight: bold
+    .change
+      display: inline-flex
+      align-items: center
+      margin: 0 auto
+      +max-SP
+        flex-direction: column
+      .change__header
+        color: $green
+      .change__content
+        font-size: 1.2em
+      .change__arrow
+        color: $green
+        margin: 1em
+        +max-SP
+          transform: rotate(90deg)
+      .change__after
+        font-size: 1.1em
+
 #event
   margin-top: 0
   padding: 30px
