@@ -26,7 +26,6 @@ const eventVue = new Vue({
   mounted () {
     axios.get('http://hakolab.co.jp/api/loadConnpass.cgi')
       .then((res) => {
-        console.log(res)
         res.data.events.sort(function (a, b) {
           if (a.started_at < b.started_at) return -1
           if (a.started_at > b.started_at) return 1
