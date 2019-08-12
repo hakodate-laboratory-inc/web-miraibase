@@ -26,6 +26,7 @@ const eventVue = new Vue({
   mounted () {
     axios.get('http://hakolab.co.jp/api/loadConnpass.cgi')
       .then((res) => {
+        console.log(res)
         res.data.events.sort(function (a, b) {
           if (a.started_at < b.started_at) return -1
           if (a.started_at > b.started_at) return 1
@@ -76,11 +77,12 @@ const eventVue = new Vue({
             })
         })
       })
-      .catch(() => {
+      .catch((err) => {
         this.errorIconStyle = 'display: block' // ここにアイコン画像のパスを入れる
         this.errorMessage = 'イベント情報の取得に失敗しました。\n少し時間を置いてリロードして下さい。'
         this.thumbnailStyle = 'display: none'
         this.loadingStyle = 'display: none'
+        console.log(err)
       })
   }
 })
