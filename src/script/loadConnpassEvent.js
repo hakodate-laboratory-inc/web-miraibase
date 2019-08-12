@@ -76,11 +76,12 @@ const eventVue = new Vue({
             })
         })
       })
-      .catch(() => {
+      .catch((err) => {
         this.errorIconStyle = 'display: block' // ここにアイコン画像のパスを入れる
         this.errorMessage = 'イベント情報の取得に失敗しました。\n少し時間を置いてリロードして下さい。'
         this.thumbnailStyle = 'display: none'
         this.loadingStyle = 'display: none'
+        console.log(err)
       })
   }
 })
