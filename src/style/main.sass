@@ -326,7 +326,7 @@
 
 #price
   h2
-    margin-bottom: 30px
+    margin: 50px auto 30px
     line-height: 1.5em
   .list
     display: flex
@@ -337,6 +337,18 @@
     .item
       width: 300px
       margin: 20px 50px
+      &.-monthlyFee
+        width: 700px
+        +max-SP
+          width: 300px
+        margin: 30px 20px auto
+        .list
+          justify-content: space-between
+        .item
+          margin: 0
+        .info
+          margin-top: 30px
+          text-align: center
       h3
         display: block
         height: 2.5em
@@ -352,7 +364,13 @@
           text-align: left
         .pay
           text-align: right
-
+        .no-grid
+          grid-column: 1 / 3
+          &.plan
+            line-height: 1em
+        .annotation
+          font-size: 0.9em
+          grid-column: 1 / 3
         h4
           grid-column: 1 / 3
           font-weight: bold
@@ -373,6 +391,8 @@
 #calendar
   text-align: center
   margin: 100px auto
+  h2
+    margin-bottom: 1em
   .gcal
     width: 100%
     max-width: 1080px
