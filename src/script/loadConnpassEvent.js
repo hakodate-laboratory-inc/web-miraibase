@@ -24,7 +24,7 @@ const eventVue = new Vue({
     }
   },
   mounted () {
-    axios.get('http://hakolab.co.jp/api/loadConnpass.cgi')
+    axios.get('https://hakolab.co.jp/api/loadConnpass.cgi')
       .then((res) => {
         res.data.events.sort(function (a, b) {
           if (a.started_at < b.started_at) return -1
@@ -60,7 +60,7 @@ const eventVue = new Vue({
           }
           axios({
             method: 'GET',
-            url: 'http://hakolab.co.jp/api/avoidACAO.cgi?url=' + resEvent.event_url,
+            url: 'https://hakolab.co.jp/api/avoidACAO.cgi?url=' + resEvent.event_url,
             validateStatus: function (status) {
               return status < 500
             }
@@ -71,7 +71,7 @@ const eventVue = new Vue({
             })
             .catch(function (err) {
               if (err) {
-                eventVue.events[i].imageSrc = 'http://miraibase.jp/err.jpg'
+                eventVue.events[i].imageSrc = 'https://miraibase.jp/err.jpg'
               }
             })
         })
