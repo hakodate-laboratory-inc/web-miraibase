@@ -1,7 +1,7 @@
 const el = document.getElementById('jump')
 
 window.addEventListener('scroll', DisplaySwitch)
-function DisplaySwitch () { 
+function DisplaySwitch () {
   const mediaQuery = matchMedia('(max-width: 798px')
 
   if (window.pageYOffset > 680 && !mediaQuery.matches) {
