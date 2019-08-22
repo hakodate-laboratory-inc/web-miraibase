@@ -1,6 +1,7 @@
 .DS_Store
 .cache/
 dist/
+build/
 
 # Created by https://www.gitignore.io/api/node
 
