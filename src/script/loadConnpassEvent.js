@@ -1,4 +1,4 @@
-import Vue from 'vue/dist/vue.js'
+import Vue from 'vue/dist/vue.min'
 import axios from 'axios'
 import 'moment/src/locale/ja'
 import moment from 'moment'
