@@ -25,10 +25,13 @@
   },
   "scripts": {
     "dev": "parcel src/index.pug --open",
-    "build": "npm run lint; rm -R build; parcel build src/index.pug --public-url ./ -d build; open build",
+    "build": "npm run lint; rm -R build; parcel build src/index.pug --public-url ./ -d build",
     "github-build": "parcel build src/index.pug --public-url ./ -d docs",
     "lint": "eslint src/",
-    "deploy": "npm run build; git add .; git commit -m 'deploy'; git push"
+    "deploy": "npm run build; node deploy.js"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "dotenv": "^8.1.0",
+    "ftp-deploy": "^2.3.3"
+  }
 }

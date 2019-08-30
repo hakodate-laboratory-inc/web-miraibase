@@ -23,15 +23,10 @@ $ npm run dev
 ```
 
 ## How to Deploy
-1. ビルドする
 ```shell
-$ npm run build
+$ npm run deploy
+# or yarn deploy
 ```
-→ buildフォルダが自動で開く
-
-2. アップロードする
-ftpでよしなに。
-buildフォルダの中身を全部投げる。
 
 ## Visual
 ![screencapture-miraibase-jp-2018-12-11-23_21_47](https://user-images.githubusercontent.com/9881744/49806675-b7c99600-fd9b-11e8-9118-48f87c390bd5.png)
