@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "dotenv": "^8.1.0",
-    "ftp-deploy": "^2.3.3"
+    "ftp-deploy": "^2.3.3",
+    "git-rev-sync": "^1.12.0"
   }
 }

@@ -1,5 +1,6 @@
 const FtpDeploy = require('ftp-deploy')
 const ftpDeploy = new FtpDeploy()
+const git = require('git-rev-sync')
 require('dotenv').config()
 
 const config = {
@@ -16,7 +17,7 @@ const config = {
 
 ftpDeploy.deploy(config)
   .then((res) => {
-    console.log(`Deploy Complete.`)
+    console.log(`Deploy Complete ${git.short()}.`)
   })
   .catch((err) => {
     throw err
