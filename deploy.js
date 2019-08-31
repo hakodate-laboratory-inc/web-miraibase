@@ -8,10 +8,10 @@ const config = {
   password: process.env.FTP_PASSWORD,
   host: process.env.FTP_HOST,
   localRoot: __dirname + '/build',
-  remoteRoot: '/miraibase.jp/public_html/',
+  remoteRoot: './',
   include: ['**/*.*'],
   exclude: ['.DS_Store'],
-  // deleteRemote: true,
+  deleteRemote: true,
   forcePasv: true
 }
 
