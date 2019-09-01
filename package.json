@@ -25,7 +25,7 @@
   },
   "scripts": {
     "dev": "parcel src/index.pug --open",
-    "build": "npm run lint; rm -R build; parcel build src/index.pug --public-url ./ -d build",
+    "build": "npm run lint; rm -R build; parcel build src/index.pug --public-url ./ -d build; cp src/images/err.jpg build/err.jpg",
     "github-build": "parcel build src/index.pug --public-url ./ -d docs",
     "lint": "eslint src/",
     "deploy": "npm run build; node deploy.js"
