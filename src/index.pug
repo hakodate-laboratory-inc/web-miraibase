@@ -1,5 +1,9 @@
 doctype html
 
+//- Google Tag Manager(Google Analytics)
+script.
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK63JQ2');
+
 title MIRAI BASE
 meta(charset='utf-8')
 meta(name='description' content='コワーキングスペース MIRAI BASEは、現在函館で多方面に活躍する方々や、これから活躍していく方々の活動拠点となるための共同作業場です。個人での作業やグループでの作業、フィールドワークの拠点、共通の技術を用いる仲間とのコミュニケーション、ものづくりなどにご利用ください。')
@@ -19,6 +23,7 @@ meta(property='og:description', content='MIRAI BASEは、函館で多方面に�
 meta(name='twitter:card', content='summary')
 meta(name='twitter:title' content='コワーキングスペース MIRAI BASE')
 meta(name='twitter:text:title' content='コワーキングスペース MIRAI BASE')
+meta(name='google-site-verification', content='kqErxoADTB_P6UWPz_i5AUn5yk92sazePhYIxZYR09E')
 
 #jump
   .toTop
@@ -209,10 +214,7 @@ footer.bc-green.section
 
 script(src='app.js')
 
-//- Global site tag (gtag.js) - Google Analytics
-script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-147982265-1')
-script.
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-147982265-1');
+// Google Tag Manager (noscript)
+noscript
+  iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-PK63JQ2', height='0', width='0', style='display:none;visibility:hidden')
+// End Google Tag Manager (noscript)
