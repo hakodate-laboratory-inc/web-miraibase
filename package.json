@@ -28,7 +28,8 @@
     "build": "npm run lint; rm -R build; parcel build src/index.pug --public-url ./ -d build; cp src/images/err.jpg build/err.jpg; cp src/images/ogimage.png build/ogimage.png",
     "github-build": "parcel build src/index.pug --public-url ./ -d docs",
     "lint": "eslint src/",
-    "deploy": "npm run build; node deploy.js"
+    "deploy": "npm run build; node deploy.js",
+    "fmt": "yarn prettier --write src/**/*.js src/**/*.pug"
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^1.0.3",
