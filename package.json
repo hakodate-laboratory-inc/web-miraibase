@@ -38,6 +38,12 @@
     "prettier": "^1.18.2"
   },
   "prettier": {
-    "singleQuote": true
+    "singleQuote": true,
+    "useTabs": false,
+    "tabWidth": 2,
+    "semi": false,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "arrowParens": "always"
   }
 }
