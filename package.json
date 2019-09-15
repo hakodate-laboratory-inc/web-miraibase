@@ -28,10 +28,11 @@
     "build": "npm run lint; rm -R build; parcel build src/index.pug --public-url ./ -d build; cp src/images/err.jpg build/err.jpg; cp src/images/ogimage.png build/ogimage.png",
     "github-build": "parcel build src/index.pug --public-url ./ -d docs",
     "lint": "eslint src/",
-    "lintfix": "eslint --fix src/",
+    "lintfix": "eslint --fix src/;prettier --write src/**/*.pug",
     "deploy": "npm run build; node deploy.js"
   },
   "devDependencies": {
+    "@prettier/plugin-pug": "^1.0.3",
     "dotenv": "^8.1.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.0",
@@ -48,7 +49,7 @@
   },
   "lint-staged": {
     "src/*.*": [
-      "eslint --fix",
+      "npm run lintfix",
       "git add"
     ]
   }
