@@ -48,8 +48,9 @@
     }
   },
   "lint-staged": {
-    "src/*.*": [
-      "npm run lintfix",
+    "src/**/*.*": [
+      "eslint --fix src/",
+      "prettier --write src/**/*.pug",
       "git add"
     ]
   }
