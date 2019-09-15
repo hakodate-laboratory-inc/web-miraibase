@@ -15,7 +15,7 @@ const eventVue = new Vue({
     errorIconStyle: ''
   },
   methods: {
-    switchLoadingStyle: function () {
+    switchLoadingStyle: function() {
       this.loadedThumbnails++
       if (this.loadedThumbnails >= 3) {
         this.thumbnailStyle = ''
@@ -23,10 +23,11 @@ const eventVue = new Vue({
       }
     }
   },
-  mounted () {
-    axios.get('https://hakolab.co.jp/api/loadConnpass.cgi')
+  mounted() {
+    axios
+      .get('https://hakolab.co.jp/api/loadConnpass.cgi')
       .then((res) => {
-        res.data.events.sort(function (a, b) {
+        res.data.events.sort(function(a, b) {
           if (a.started_at < b.started_at) return -1
           if (a.started_at > b.started_at) return 1
           return 0
@@ -39,12 +40,19 @@ const eventVue = new Vue({
             imageSrc: ''
           })
           const eventDay = moment(resEvent.started_at)
-          const today = moment().hour(0).minute(0).seconds(0)
+          const today = moment()
+            .hour(0)
+            .minute(0)
+            .seconds(0)
           const diff = eventDay.diff(today, 'days', true)
           eventVue.events[i].title = resEvent.title
           eventVue.events[i].link = resEvent.event_url
-          eventVue.events[i].startDate = moment(resEvent.started_at).format('YYYY年M月D日(ddd) H:mm')
-          eventVue.events[i].desc = /<p>([\s\S]*?)<\/p>/g.exec(resEvent.description)[1]
+          eventVue.events[i].startDate = moment(resEvent.started_at).format(
+            'YYYY年M月D日(ddd) H:mm'
+          )
+          eventVue.events[i].desc = /<p>([\s\S]*?)<\/p>/g.exec(
+            resEvent.description
+          )[1]
           if (diff < 0) {
             eventVue.events[i].status = '終了しました'
             eventVue.events[i].statusColor = 'eventStatus-end'
@@ -55,21 +63,26 @@ const eventVue = new Vue({
             eventVue.events[i].status = '明日開催'
             eventVue.events[i].statusColor = 'eventStatus-tommorow'
           } else {
-            eventVue.events[i].status = '受付中（詳細はリンク先をご確認ください）'
+            eventVue.events[i].status =
+              '受付中（詳細はリンク先をご確認ください）'
             eventVue.events[i].statusColor = 'eventStatus-yet'
           }
           axios({
             method: 'GET',
-            url: 'https://hakolab.co.jp/api/avoidACAO.cgi?url=' + resEvent.event_url,
-            validateStatus: function (status) {
+            url:
+              'https://hakolab.co.jp/api/avoidACAO.cgi?url=' +
+              resEvent.event_url,
+            validateStatus: function(status) {
               return status < 500
             }
           })
-            .then(function (res2) {
-              eventVue.events[i].imageSrc = /background-image:url\((\S*)\)/.exec(res2.data)[1]
+            .then(function(res2) {
+              eventVue.events[
+                i
+              ].imageSrc = /background-image:url\((\S*)\)/.exec(res2.data)[1]
               eventVue.switchLoadingStyle()
             })
-            .catch(function (err) {
+            .catch(function(err) {
               if (err) {
                 eventVue.events[i].imageSrc = 'https://miraibase.jp/err.jpg'
               }
@@ -78,7 +91,8 @@ const eventVue = new Vue({
       })
       .catch((err) => {
         this.errorIconStyle = 'display: block' // ここにアイコン画像のパスを入れる
-        this.errorMessage = 'イベント情報の取得に失敗しました。\n少し時間を置いてリロードして下さい。'
+        this.errorMessage =
+          'イベント情報の取得に失敗しました。\n少し時間を置いてリロードして下さい。'
         this.thumbnailStyle = 'display: none'
         this.loadingStyle = 'display: none'
         console.log(err)

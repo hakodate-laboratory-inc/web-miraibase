@@ -30,6 +30,7 @@ module.exports = {
       'error',
       'never'
     ],
-    'prettier/prettier': 'error'
+    'prettier/prettier': 'error',
+    'standard/computed-property-even-spacing': false
   }
 };
