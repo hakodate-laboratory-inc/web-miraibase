@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const calendar = new Calendar(calendarElement, {
     plugins: [timeGridPlugin],
-    defaultView: 'timeGridWeek'
+    defaultView: 'timeGridWeek',
+    height: 500
   })
 
   calendar.render()

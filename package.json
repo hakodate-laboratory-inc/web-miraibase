@@ -53,7 +53,7 @@
   },
   "lint-staged": {
     "src/**/*.*": [
-      "eslint --fix src/**/*.js;prettier --write src/**/*.pug",
+      "yarn lintfix",
       "git add"
     ]
   }
