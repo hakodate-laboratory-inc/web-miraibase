@@ -10,7 +10,6 @@ module.exports = {
     'prettier'
   ],
   plugins: [
-    'html',
     'prettier'
   ],
   'rules': {
