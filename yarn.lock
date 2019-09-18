@@ -701,10 +701,15 @@
   resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-4.3.1.tgz#a061c6d2e998d4155439dbc8aefdfe01cdf648d8"
   integrity sha512-Eh+p/wpMkWGu26f8NpfQK9ecQMoZxX/aopv+0+4/CH+Ip0paP6iEc40JYgTz7RFl0bFqV1dvwyGyUZ4+9ZeySA==
 
-"@fullcalendar/daygrid@^4.3.0", "@fullcalendar/daygrid@~4.3.0":
+"@fullcalendar/daygrid@~4.3.0":
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-4.3.0.tgz#1b4ab9fdc238dba77921cb7c5bd2d813c834e905"
   integrity sha512-OrGaRIGbELESOXOCXtoQVY4cOxnxmN7OrjDGbMoVITdoXWuIZ6sFNO84WcBQoRaIbkmqVM0SAU2MENwy+eEwqQ==
+
+"@fullcalendar/google-calendar@^4.3.0":
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/google-calendar/-/google-calendar-4.3.0.tgz#ad2fc7f15d641bf1cbadc4b0c2a8d83089106890"
+  integrity sha512-U/KjK0kVgNKeVUzyvK7CBVEtLP3mIfE3EVjTQ9rULRzsq2NqZO5PIptAsr5X4HYEThJt3jtHMJ8S0dSLMwWk8w==
 
 "@fullcalendar/timegrid@^4.3.0":
   version "4.3.0"
