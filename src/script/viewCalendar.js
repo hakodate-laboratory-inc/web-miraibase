@@ -1,14 +1,15 @@
 import { Calendar } from '@fullcalendar/core'
 import timeGridPlugin from '@fullcalendar/timegrid'
+import '@fullcalendar/core/main.css'
+import '@fullcalendar/timegrid/main.css'
 
 document.addEventListener('DOMContentLoaded', () => {
   const calendarElement = document.getElementById('gcal')
 
-  let calendar = new Calendar(calendarElement, {
+  const calendar = new Calendar(calendarElement, {
     plugins: [timeGridPlugin],
     defaultView: 'timeGridWeek'
   })
 
-  console.log(calendar)
-  calendar.rendar()
+  calendar.render()
 })
