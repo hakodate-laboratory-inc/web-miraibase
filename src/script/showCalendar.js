@@ -14,6 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
     googleCalendarApiKey: 'AIzaSyBB7eXTLFmD4iCU7roC--Eoem5h8ZYQuZg',
     events: {
       googleCalendarId: 'pmhd53aqkpdoqtd1qtj5kluo64@group.calendar.google.com'
+    },
+    columnHeaderFormat: {
+      month: 'numeric',
+      day: 'numeric',
+      weekday: 'narrow'
+    },
+    eventTimeFormat: {
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: false
     }
   })
 
