@@ -5,26 +5,32 @@ module.exports = {
     browser: true,
     node: true
   },
-  extends: 'standard',
-  plugins: [
-    'html'
+  extends: [
+    'standard',
+    'prettier'
   ],
-  "rules": {
-    "indent": [
-      "error",
+  plugins: [
+    'html',
+    'prettier'
+  ],
+  'rules': {
+    'indent': [
+      'error',
       2
     ],
-    "linebreak-style": [
-      "error",
-      "unix"
+    'linebreak-style': [
+      'error',
+      'unix'
     ],
-    "quotes": [
-      "error",
-      "single"
+    'quotes': [
+      'error',
+      'single'
     ],
-    "semi": [
-      "error",
-      "never"
-    ]
+    'semi': [
+      'error',
+      'never'
+    ],
+    'prettier/prettier': 'error',
+    'standard/computed-property-even-spacing': false
   }
 };
