@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const calendarElement = document.getElementById('gcal')
 
   let calendar = new Calendar(calendarElement, {
-    plugins: [ timeGridPlugin ],
+    plugins: [timeGridPlugin],
     defaultView: 'timeGridWeek'
   })
 
