@@ -4,34 +4,42 @@ head
   //- Google Tag Manager(Google Analytics)
   script.
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK63JQ2');
-
   title MIRAI BASE
   meta(charset='utf-8')
-  meta(name='description' content='コワーキングスペース MIRAI BASEは、現在函館で多方面に活躍する方々や、これから活躍していく方々の活動拠点となるための共同作業場です。個人での作業やグループでの作業、フィールドワークの拠点、共通の技術を用いる仲間とのコミュニケーション、ものづくりなどにご利用ください。')
-  meta(name="keywords", content='コワーキングスペース,作業場,MIRAIBASE,未来ベース,ミライベース,貸しオフィス')
-  meta(name='viewport' content='width=device-width,initial-scale=1.0')
+  meta(
+    name='description',
+    content='コワーキングスペース MIRAI BASEは、現在函館で多方面に活躍する方々や、これから活躍していく方々の活動拠点となるための共同作業場です。個人での作業やグループでの作業、フィールドワークの拠点、共通の技術を用いる仲間とのコミュニケーション、ものづくりなどにご利用ください。'
+  )
+  meta(name='keywords', content='コワーキングスペース,作業場,MIRAIBASE,未来ベース,ミライベース,貸しオフィス')
+  meta(name='viewport', content='width=device-width,initial-scale=1.0')
 
   //- meta(name='robots' content='noindex')
-  link(rel="icon" type="image/png", href="./images/favicon.png")
-  link(rel="apple-touch-icon" href="./images/apple-touch-icon.png")
+  link(rel='icon', type='image/png', href='./images/favicon.png')
+  link(rel='apple-touch-icon', href='./images/apple-touch-icon.png')
 
-  meta(name='og:title' content='コワーキングスペース MIRAI BASE')
+  meta(name='og:title', content='コワーキングスペース MIRAI BASE')
   meta(property='og:type', content='website')
   meta(property='og:url', content='https://miraibase.jp/')
   meta(property='og:image', content='https://miraibase.jp/ogimage.png')
   meta(property='og:site_name', content='コワーキングスペース MIRAI BASE')
-  meta(property='og:description', content='MIRAI BASEは、函館で多方面に活躍する方々や、これから活躍していく方々の活動拠点となるための共同作業場です。')
+  meta(
+    property='og:description',
+    content='MIRAI BASEは、函館で多方面に活躍する方々や、これから活躍していく方々の活動拠点となるための共同作業場です。'
+  )
   meta(name='twitter:card', content='summary')
-  meta(name='twitter:title' content='コワーキングスペース MIRAI BASE')
-  meta(name='twitter:text:title' content='コワーキングスペース MIRAI BASE')
-  meta(name='google-site-verification', content='kqErxoADTB_P6UWPz_i5AUn5yk92sazePhYIxZYR09E')
+  meta(name='twitter:title', content='コワーキングスペース MIRAI BASE')
+  meta(name='twitter:text:title', content='コワーキングスペース MIRAI BASE')
+  meta(
+    name='google-site-verification',
+    content='kqErxoADTB_P6UWPz_i5AUn5yk92sazePhYIxZYR09E'
+  )
 
 #jump
   .toTop
-    a(href = "#") Top
+    a(href='#') Top
 
 #topview
-  img.logo(src="./images/mb-logo-vartical-green.svg", alt="")
+  img.logo(src='./images/mb-logo-vartical-green.svg', alt='')
   p 経験の芽を育てる土壌
 
 #scrollDown
@@ -53,15 +61,24 @@ head
 #event.bc-green.section
   .list
     .post(v-for='event in events')
-      a(:href='event.link', target="_blank")
-        img(:src='event.imageSrc' , :alt='event.title' v-bind:style='thumbnailStyle' @load='switchLoadingStyle')
-        img.loading(src='./images/loading-white.svg' v-bind:style='loadingStyle' alt='loading')
-      p.eventStatus(v-bind:class="event.statusColor") {{ event.status }}
-      h3 {{event.title}}
-      p.eventDate {{event.startDate}}
+      a(:href='event.link', target='_blank')
+        img(
+          :src='event.imageSrc',
+          :alt='event.title',
+          v-bind:style='thumbnailStyle',
+          @load='switchLoadingStyle'
+        )
+        img.loading(
+          src='./images/loading-white.svg',
+          v-bind:style='loadingStyle',
+          alt='loading'
+        )
+      p.eventStatus(v-bind:class='event.statusColor') {{ event.status }}
+      h3 {{ event.title }}
+      p.eventDate {{ event.startDate }}
       p(v-HTML='event.desc')
   .error
-    p {{errorMessage}}
+    p {{ errorMessage }}
 
 #about.section
   h2 函館で頑張るみんなの基地をめざして
@@ -72,12 +89,12 @@ head
       p 電源、無線LANなどの各種インフラに加え、プリンタやディスプレイ、プロジェクターなどの機材、また事務用品、会議室など、複数人で利用可能な設備もご用意しております。
     .room
       .item
-        img(src="./images/asoviva.jpg", alt="asoviva")
+        img(src='./images/asoviva.jpg', alt='asoviva')
         h3 asoviva - ラフな作業場
         p コミュニケーションを取りながら作業できる空間。グループで相談しながら開発を行ったり、少人数で打ち合わせをしたりといった形でご利用いただけます。
         p 利用可能人数:20人
       .item
-        img(src="./images/dummy.png", alt="sigotova")
+        img(src='./images/dummy.png', alt='sigotova')
         h3 sigotova - 静かな作業場
         p 静かに集中して作業できる空間。個人の課題に集中したり、書類仕事を行ったりと、なにかに邪魔されたくない作業ができる部屋です。
         p 利用可能人数:20人
@@ -85,35 +102,35 @@ head
   h2 サービス / 設備
   .list
     .item
-      img(src="./images/service-drink.svg", alt="ソフトドリンク販売")
+      img(src='./images/service-drink.svg', alt='ソフトドリンク販売')
       h3 ソフトドリンク販売
       p 格安でドリンクを提供しております。お越しの際にメニューをご確認ください。
     .item
-      img(src="./images/service-wifi.svg", alt="無線LAN")
+      img(src='./images/service-wifi.svg', alt='無線LAN')
       h3 無線LAN
       p 利用者専用のWi-Fiをご用意しております。パスワードはお越しの際にご確認ください。
     .item
-      img(src="./images/service-printer.jpg", alt="プリンタ, スキャナ")
+      img(src='./images/service-printer.jpg', alt='プリンタ, スキャナ')
       h3 プリンタ&amp;スキャナ
       p Wi-Fi経由で印刷, スキャンが可能です。使用できる紙のサイズはA4, A3, B4, B3です。
     .item
-      img(src="./images/service-dengen.jpg", alt="電源")
+      img(src='./images/service-dengen.jpg', alt='電源')
       h3 電源
       p 各所にご用意しております。混雑している際は譲り合ってご利用ください。
     .item
-      img(src="./images/service-projector.jpg", alt="プロジェクター")
+      img(src='./images/service-projector.jpg', alt='プロジェクター')
       h3 プロジェクター
       p イベントや会議の際にご利用いただけます。詳しくはスタッフまでお声がけください。
     .item
-      img(src="./images/service-whiteboard.jpg", alt="ホワイトボード")
+      img(src='./images/service-whiteboard.jpg', alt='ホワイトボード')
       h3 ホワイトボード
       p 一人でも複数人でもご利用いただけます。小さいサイズもご用意しております。
     .item
-      img(src="./images/service-meetingRoom.jpg", alt="会議室")
+      img(src='./images/service-meetingRoom.jpg', alt='会議室')
       h3 会議室
       p 一時間ごとに利用枠を設けております。ご利用の際は受付にてお申込みください。
     .item
-      img(src="./images/service-microwave.jpg", alt="電子レンジ")
+      img(src='./images/service-microwave.jpg', alt='電子レンジ')
       h3 電子レンジ
       p あたためますか？
 
@@ -174,42 +191,51 @@ head
 #calendar.section
   h2 MIRAI BASEの営業日
     img.tag(src='./images/update-makinas-greenicon.svg')
-  iframe.gcal(src="https://calendar.google.com/calendar/embed?src=pmhd53aqkpdoqtd1qtj5kluo64%40group.calendar.google.com&ctz=Asia%2FTokyo&mode=WEEK&showPrint=0&showTitle=0&showTz=0&showCalendars=0&showDate=0"
-         frameborder="0"
-         scrolling="no")
+  iframe.gcal(
+    src='https://calendar.google.com/calendar/embed?src=pmhd53aqkpdoqtd1qtj5kluo64%40group.calendar.google.com&ctz=Asia%2FTokyo&mode=WEEK&showPrint=0&showTitle=0&showTz=0&showCalendars=0&showDate=0',
+    frameborder='0',
+    scrolling='no'
+  )
 
 #map.section
   h2 アクセス
-  iframe.map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2973.642528536144!2d140.75497011585747!3d41.81446057922727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9ef42ee2a8a8f9%3A0x465635e7d9334cc8!2sMIRAI+BASE!5e0!3m2!1sja!2sjp!4v1519789031434" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
+  iframe.map(
+    src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2973.642528536144!2d140.75497011585747!3d41.81446057922727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9ef42ee2a8a8f9%3A0x465635e7d9334cc8!2sMIRAI+BASE!5e0!3m2!1sja!2sjp!4v1519789031434',
+    width='600',
+    height='450',
+    frameborder='0',
+    style='border:0',
+    allowfullscreen
+  )
 
 #contact.section
   h2 MIRAI BASEへのお問い合わせ
   .informations
     .list
       .item
-        img.mail(src="./images/contact-mail.svg", alt="")
+        img.mail(src='./images/contact-mail.svg', alt='')
         p mirai.base.hkd[atmark]gmail.com
       .item
-        img.phone(src="./images/contact-phone.svg", alt="")
+        img.phone(src='./images/contact-phone.svg', alt='')
         p 070-2679-1920
       .item
-        img.twitter(src="./images/contact-tw.svg", alt="")
-        a(href="https://twitter.com/mirai_base") @mirai_base
+        img.twitter(src='./images/contact-tw.svg', alt='')
+        a(href='https://twitter.com/mirai_base') @mirai_base
       .item
-        img.facebook(src="./images/contact-fb.svg", alt="")
-        a(href="https://www.facebook.com/miraibase.hkd/") miraibase.hkd
+        img.facebook(src='./images/contact-fb.svg', alt='')
+        a(href='https://www.facebook.com/miraibase.hkd/') miraibase.hkd
     .announce
       .open
         h4 営業時間
         p 
-          a(href="#calendar") 本ページ営業日カレンダー
+          a(href='#calendar') 本ページ営業日カレンダー
           | をご確認ください。
 
       .exception
         p 天候などにより営業時間が変動する場合がございます。営業状態または延長・短縮営業のご確認の際には <a href='https://twitter.com/mirai_base'>MIRAIBASEのTwitterアカウント</a> をご確認ください。
 
 footer.bc-green.section
-  img(src="./images/mb-logo-horizontal-white.svg", alt="")
+  img(src='./images/mb-logo-horizontal-white.svg', alt='')
   p 〒041-0806 北海道函館市 美原２丁目７−２１ 万勝ビル１F
   p 070-2679-1920
 
@@ -217,5 +243,10 @@ script(src='app.js')
 
 // Google Tag Manager (noscript)
 noscript
-  iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-PK63JQ2', height='0', width='0', style='display:none;visibility:hidden')
+  iframe(
+    src='https://www.googletagmanager.com/ns.html?id=GTM-PK63JQ2',
+    height='0',
+    width='0',
+    style='display:none;visibility:hidden'
+  )
 // End Google Tag Manager (noscript)
