@@ -2,7 +2,7 @@ import { Calendar } from '@fullcalendar/core'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import googleCalendarPlugin from '@fullcalendar/google-calendar'
 import '@fullcalendar/core/main.css'
-import '@fullcalendar/timegrid/main.css'
+import jpLocate from '@fullcalendar/core/locales/ja'
 
 document.addEventListener('DOMContentLoaded', () => {
   const calendarElement = document.getElementById('gcal')
@@ -15,16 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
     events: {
       googleCalendarId: 'pmhd53aqkpdoqtd1qtj5kluo64@group.calendar.google.com'
     },
+    titleFormat: {
+      month: 'short'
+    },
     columnHeaderFormat: {
-      month: 'numeric',
-      day: 'numeric',
-      weekday: 'narrow'
+      day: 'numeric'
     },
     eventTimeFormat: {
       hour: 'numeric',
       minute: 'numeric',
       hour12: false
-    }
+    },
+    locale: jpLocate
   })
 
   calendar.render()
