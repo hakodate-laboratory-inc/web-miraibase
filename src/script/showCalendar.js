@@ -40,7 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
           ? _dayNumber.pop()
           : fcDayHeader[i].innerText
       }
-    }
+    },
+    nowIndicator: true
   })
 
   calendar.render()
