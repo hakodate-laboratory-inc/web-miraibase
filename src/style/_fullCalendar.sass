@@ -11,6 +11,16 @@
     padding: 0
     background-color: $green
     border: 0
+    border-radius: .25em
+
+    &:not(:first-child)
+      margin-left: 5px
+      border-top-left-radius: .25em
+      border-bottom-left-radius: .25em
+
+    &:not(:last-child)
+      border-top-right-radius: .25em
+      border-bottom-right-radius: .25em
 
   .fc-today-button
     font-size: 10px
@@ -20,6 +30,9 @@
 
     &:disabled
       background-color: #2C3E50
+
+  .fc-button-group
+    margin-left: 5px
 
   .fc-day-header
     font-size: 10px
