@@ -2,7 +2,7 @@ import { Calendar } from '@fullcalendar/core'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import googleCalendarPlugin from '@fullcalendar/google-calendar'
 import '@fullcalendar/core/main.css'
-import jpLocate from '@fullcalendar/core/locales/ja'
+import jpLocale from '@fullcalendar/core/locales/ja'
 
 document.addEventListener('DOMContentLoaded', () => {
   const calendarElement = document.getElementById('gcal')
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       minute: 'numeric',
       hour12: false
     },
-    locale: jpLocate,
+    locale: jpLocale,
     slotLabelFormat: {
       hour: 'numeric',
       minute: '2-digit'
