@@ -6,12 +6,15 @@
     margin-bottom: 8px
 
   .fc-button
-    width: 35px
-    height: 35px
+    width: 50px
+    height: 20px
     padding: 0
     background-color: $green
     border: 0
     border-radius: .25em
+    +max-SP
+      width: 35px
+      height: 35px
 
     &:not(:first-child)
       margin-left: 5px
@@ -22,6 +25,9 @@
       border-top-right-radius: .25em
       border-bottom-right-radius: .25em
 
+  .fc-button-group
+    margin-left: 10px
+
   .fc-today-button
     font-size: 10px
     font-weight: bold
@@ -31,12 +37,12 @@
     &:disabled
       background-color: #2C3E50
 
-  .fc-button-group
-    margin-left: 5px
-
   .fc-day-header
-    font-size: 10px
-    line-height: 3
+    font-size: 14px
+    line-height: 2
+    +max-SP
+      font-size: 10px
+      line-height: 3
 
   .fc-axis
     &.fc-time,
