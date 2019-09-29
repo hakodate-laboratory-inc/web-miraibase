@@ -7,6 +7,11 @@ import jpLocale from '@fullcalendar/core/locales/ja'
 document.addEventListener('DOMContentLoaded', () => {
   const calendarElement = document.getElementById('gcal')
 
+  const now = new Date()
+  now.setHours(new Date().getHours() - 1)
+  now.setMinutes(0)
+  now.setSeconds(0)
+
   const calendar = new Calendar(calendarElement, {
     plugins: [timeGridPlugin, googleCalendarPlugin],
     defaultView: 'timeGridWeek',
@@ -41,7 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
           : fcDayHeader[i].innerText
       }
     },
-    nowIndicator: true
+    nowIndicator: true,
+    scrollTime: now.toTimeString()
   })
 
   calendar.render()
