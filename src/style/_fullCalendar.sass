@@ -1,0 +1,112 @@
+.fc
+  h2
+    font-size: 18px
+
+  .fc-toolbar.fc-header-toolbar
+    margin-bottom: 8px
+
+  .fc-button
+    width: 50px
+    height: 20px
+    padding: 0
+    background-color: $green
+    border: 0
+    border-radius: .25em
+    +max-SP
+      width: 35px
+      height: 35px
+
+    &:not(:first-child)
+      margin-left: 5px
+      border-top-left-radius: .25em
+      border-bottom-left-radius: .25em
+
+    &:not(:last-child)
+      border-top-right-radius: .25em
+      border-bottom-right-radius: .25em
+
+  .fc-button-group
+    margin-left: 10px
+
+  .fc-today-button
+    font-size: 10px
+    font-weight: bold
+    background-color: $green
+    border: 0
+
+    &:disabled
+      background-color: #2C3E50
+
+  .fc-prev-button,
+  .fc-next-button
+    display: flex
+    justify-content: center
+
+  .fc-icon-chevron-left,
+  .fc-icon-chevron-right
+    vertical-align: unset
+    font-size: 13px
+
+
+  .fc-icon-chevron-left
+    &::before
+      content: '◀'
+
+  .fc-icon-chevron-right
+    &::before
+      content: '▶'
+
+  .fc-day-header
+    font-size: 14px
+    line-height: 2
+    +max-SP
+      font-size: 10px
+      line-height: 3
+
+  .fc-axis
+    &.fc-time,
+    &.fc-widget-content
+      font-size: 12px
+      line-height: 1.2
+    &.fc-widget-content
+      text-align: center
+    &.fc-time
+      text-align: right
+
+  .fc-time-grid-event .fc-time,
+  .fc-content
+    font-size: 8px
+    white-space: normal
+    word-wrap: break-word
+
+  .fc-event
+    background-color: $green
+    border-color: $green
+    pointer-events: none
+
+  .fc-divider
+    background-color: #fff
+  .fc-sun
+    color: #d71618
+  .fc-sat
+    color: #008cd6
+
+.fc-unthemed
+  th,
+  td,
+  thead,
+  tbody,
+  .fc-divider,
+  .fc-row,
+  .fc-content,
+  .fc-popover,
+  .fc-list-view,
+  .fc-list-heading td
+    border-color: #d2d2d2
+
+
+  td.fc-today
+    background-color: #ebf5ec
+
+.fc-now-indicator
+  border-color: $green

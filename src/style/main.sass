@@ -1,7 +1,10 @@
-@import 'reset'
-@import 'mixin'
-@import 'base'
-@import 'components'
+@import './reset'
+
+@import '@fullcalendar/timegrid/main.css'
+@import './mixin'
+@import './base'
+@import './components'
+@import './fullCalendar'
 
 #jump
   z-index: 11
@@ -291,8 +294,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr
     grid-gap: 50px
     +max-SP
-     grid-template-columns: 1fr
-     grid-gap: 10vw 8%
+      grid-template-columns: 1fr
+      grid-gap: 10vw 8%
     .item
       +center
       align-items: flex-start
@@ -331,8 +334,8 @@
   .list
     display: flex
     +max-SP
-     flex-direction: column
-     align-items: center
+      flex-direction: column
+      align-items: center
     justify-content: center
     .item
       width: 300px
@@ -391,11 +394,9 @@
 #calendar
   text-align: center
   margin: 100px auto
-  h2
-    margin-bottom: 1em
   .gcal
-    width: calc(100% - 20px)
-    margin: 0 auto
+    margin: 30px auto 0
+    padding: 0 20px
     max-width: 1080px
     height: 500px
 
@@ -428,7 +429,7 @@
     .list
       width: 45%
       +max-SP
-        width: 100%  
+        width: 100%
       margin: 20px 0 20px 0px
       .item
         display: grid

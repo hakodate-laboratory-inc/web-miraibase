@@ -10,7 +10,6 @@ module.exports = {
     'prettier'
   ],
   plugins: [
-    'html',
     'prettier'
   ],
   'rules': {
@@ -31,6 +30,6 @@ module.exports = {
       'never'
     ],
     'prettier/prettier': 'error',
-    'standard/computed-property-even-spacing': false
+    'standard/computed-property-even-spacing': 0
   }
 };

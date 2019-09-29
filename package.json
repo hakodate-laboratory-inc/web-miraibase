@@ -5,6 +5,9 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@fullcalendar/core": "~4.3.0",
+    "@fullcalendar/google-calendar": "^4.3.0",
+    "@fullcalendar/timegrid": "^4.3.0",
     "axios": "^0.18.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.10.0",
@@ -14,6 +17,7 @@
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
+    "gitmoji-cli": "^2.0.0",
     "moment": "^2.23.0",
     "node-mandrill": "^1.0.1",
     "parcel-bundler": "^1.6.2",
@@ -28,7 +32,7 @@
     "build": "npm run lint; rm -R build; parcel build src/index.pug --public-url ./ -d build; cp src/images/err.jpg build/err.jpg; cp src/images/ogimage.png build/ogimage.png",
     "github-build": "parcel build src/index.pug --public-url ./ -d docs",
     "lint": "eslint src/",
-    "lintfix": "eslint --fix src/;prettier --write src/**/*.pug",
+    "lintfix": "eslint --fix src/**/*.js;prettier --write src/**/*.pug",
     "deploy": "npm run build; node deploy.js"
   },
   "devDependencies": {
@@ -49,8 +53,7 @@
   },
   "lint-staged": {
     "src/**/*.*": [
-      "eslint --fix src/",
-      "prettier --write src/**/*.pug",
+      "npm run lintfix",
       "git add"
     ]
   }
