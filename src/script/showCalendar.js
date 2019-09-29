@@ -26,7 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
       minute: 'numeric',
       hour12: false
     },
-    locale: jpLocate
+    locale: jpLocate,
+    slotLabelFormat: {
+      hour: 'numeric',
+      minute: '2-digit'
+    },
+    allDayText: '営業\n状態'
   })
 
   calendar.render()
