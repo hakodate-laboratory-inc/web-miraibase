@@ -1,6 +1,9 @@
-name: Build Test
+name: Deploy
 
-on: push
+on:
+  push:
+    branches:
+    - master
 
 jobs:
   build:
@@ -17,19 +20,22 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: Deploy
       run: |
         npm install
-        npm run build
+        npm run deploy
       env:
         CI: true
+        FTP_USER: ${{ secrets.FTP_USER }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        FTP_HOST: ${{ secrets.FTP_HOST }}
     - name: Slack Notification
       uses: homoluctus/slatify@master
       if: always()
       with:
         type: ${{ job.status }}
-        job_name: '*Build test*'
+        job_name: '*Deploy*'
         mention: 'here'
-        mention_if: 'failure'
+        mention_if: 'always'
         channel: '#web-development'
         url: ${{ secrets.SLACK_WEBHOOK }}
