@@ -31,7 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
       hour: 'numeric',
       minute: '2-digit'
     },
-    allDayText: '営業\n状態'
+    allDayText: '営業\n状態',
+    datesRender: () => {
+      const fcDayHeader = document.getElementsByClassName('fc-day-header')
+      for (let i = 0; i < fcDayHeader.length; i++) {
+        const _dayNumber = /(\d+)日/gi.exec(fcDayHeader[i].innerText)
+        fcDayHeader[i].innerText = _dayNumber
+          ? _dayNumber.pop()
+          : fcDayHeader[i].innerText
+      }
+    }
   })
 
   calendar.render()
