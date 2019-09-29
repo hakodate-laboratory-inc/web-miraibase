@@ -37,6 +37,25 @@
     &:disabled
       background-color: #2C3E50
 
+  .fc-prev-button,
+  .fc-next-button
+    display: flex
+    justify-content: center
+
+  .fc-icon-chevron-left,
+  .fc-icon-chevron-right
+    vertical-align: unset
+    font-size: 13px
+
+
+  .fc-icon-chevron-left
+    &::before
+      content: '◀'
+
+  .fc-icon-chevron-right
+    &::before
+      content: '▶'
+
   .fc-day-header
     font-size: 14px
     line-height: 2
