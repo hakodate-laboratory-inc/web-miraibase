@@ -34,8 +34,8 @@ jobs:
       if: always()
       with:
         type: ${{ job.status }}
-        job_name: '*Deploy*'
+        job_name: '*Deploy* to miraibase.jp'
         mention: 'here'
         mention_if: 'always'
-        channel: '#web-development'
+        channel: '#web'
         url: ${{ secrets.SLACK_WEBHOOK }}
