@@ -59,6 +59,40 @@
     height: 40vh
   p
     margin-top: 50px
+  a
+    margin-top: 50px
+    div
+      position: relative
+      width: 24px
+      height: 24px
+      margin-bottom: -28px
+      border-left: 2px solid $green
+      border-bottom: 2px solid $green
+      -webkit-transform: rotate(-45deg)
+      transform: rotate(-45deg)
+      -webkit-animation: displayArrow 2s infinite
+      animation: displayArrow 2s infinite
+      opacity: 0
+      box-sizing: border-box
+      @for $i from 1 through 3
+        &:nth-of-type(#{$i})
+          top: 16px * ( $i - 1 )
+          -webkit-animation-delay: .25s * ( $i - 1 )
+          animation-delay: .25s * ( $i - 1 )
+  @-webkit-keyframes displayArrow
+    0%
+      opacity: 0
+    50%
+      opacity: 1
+    100%
+      opacity: 0
+  @keyframes displayArrow
+    0%
+      opacity: 0
+    50%
+      opacity: 1
+    100%
+      opacity: 0
 
 #scrollDown
   width: 100vw
