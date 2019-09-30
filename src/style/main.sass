@@ -76,23 +76,23 @@
       opacity: 0
       box-sizing: border-box
       @for $i from 1 through 3
-        &:nth-of-type(#{$i}) 
+        &:nth-of-type(#{$i})
           top: 16px * ( $i - 1 )
           -webkit-animation-delay: .25s * ( $i - 1 )
           animation-delay: .25s * ( $i - 1 )
-  @-webkit-keyframes displayArrow 
-    0% 
+  @-webkit-keyframes displayArrow
+    0%
       opacity: 0
-    50% 
+    50%
       opacity: 1
-    100% 
+    100%
       opacity: 0
-  @keyframes displayArrow 
-    0% 
+  @keyframes displayArrow
+    0%
       opacity: 0
-    50% 
+    50%
       opacity: 1
-    100% 
+    100%
       opacity: 0
 
 #scrollDown
