@@ -12,9 +12,9 @@ puts "Access-Control-Allow-Origin: *\n\n"
 
 r = ''
 res = open(droplet_ep) do |f|
-    f.each_line do |line|
-      r = r << line
-    end
+  f.each_line do |line|
+    r = r << line
+  end
 end
 
 json = JSON.parse(r)
