@@ -35,9 +35,9 @@ jobs:
         npm run deploy_api
       env:
         CI: true
-        FTP_USER: ${{ secrets.FTP_API_USER }}
-        FTP_PASSWORD: ${{ secrets.FTP_API_PASSWORD }}
-        FTP_HOST: ${{ secrets.FTP_API_HOST }}
+        FTP_API_USER: ${{ secrets.FTP_API_USER }}
+        FTP_API_PASSWORD: ${{ secrets.FTP_API_PASSWORD }}
+        FTP_API_HOST: ${{ secrets.FTP_API_HOST }}
     - name: Slack Notification
       uses: homoluctus/slatify@master
       if: always()
