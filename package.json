@@ -33,7 +33,8 @@
     "github-build": "parcel build src/index.pug --public-url ./ -d docs",
     "lint": "eslint src/",
     "lintfix": "eslint --fix src/**/*.js;prettier --write src/**/*.pug",
-    "deploy": "npm run build; node deploy.js"
+    "deploy": "npm run build; node deploy.js",
+    "deploy_api": "node deploy_api.js"
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^1.0.3",
