@@ -20,10 +20,10 @@
     "gitmoji-cli": "^2.0.0",
     "moment": "^2.23.0",
     "node-mandrill": "^1.0.1",
-    "parcel-bundler": "^1.6.2",
+    "parcel-bundler": "^1.12.4",
     "parcel-plugin-imagemin": "^1.0.2",
     "pug": "^2.0.3",
-    "sass": "^1.15.2",
+    "sass": "^1.32.2",
     "sweet-scroll": "^3.0.0",
     "vue": "^2.5.16"
   },
