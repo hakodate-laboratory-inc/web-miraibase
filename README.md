@@ -14,7 +14,6 @@ http://miraibase.jp/
 ```shell
 $ npm install
 # 省略記法： npm i
-# ただし、技術的余裕があれば yarn 推奨(そのうち説明書きます)
 ```
 
 3. ファイル監視プログラムとテストサーバの起動
@@ -25,7 +24,6 @@ $ npm run dev
 ## How to Deploy
 ```shell
 $ npm run deploy
-# or yarn deploy
 ```
 
 ## Visual
