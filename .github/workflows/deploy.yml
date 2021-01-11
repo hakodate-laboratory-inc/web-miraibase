@@ -45,6 +45,6 @@ jobs:
         type: ${{ job.status }}
         job_name: '*Deploy* to miraibase.jp'
         mention: 'here'
-        mention_if: 'always'
+        mention_if: 'failure'
         channel: '#web'
         url: ${{ secrets.SLACK_WEBHOOK }}
