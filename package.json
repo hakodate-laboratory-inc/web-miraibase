@@ -53,7 +53,15 @@
     }
   },
   "lint-staged": {
-    "src/**/*.*": [
+    "src/**/*.pug": [
+      "npm run lintfix",
+      "git add"
+    ],
+    "src/**/*.sass": [
+      "npm run lintfix",
+      "git add"
+    ],
+    "src/**/*.js": [
       "npm run lintfix",
       "git add"
     ]
