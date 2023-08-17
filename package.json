@@ -21,7 +21,7 @@
     "moment": "^2.29.4",
     "node-mandrill": "^1.0.1",
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-imagemin": "^1.0.2",
+    "parcel-plugin-imagemin": "^4.0.2",
     "pug": "^3.0.1",
     "sass": "^1.32.2",
     "sweet-scroll": "^3.0.0",
