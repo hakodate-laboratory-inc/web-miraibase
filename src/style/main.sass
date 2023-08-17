@@ -1,5 +1,3 @@
-@use "sass:math"
-
 @import './reset'
 
 @import '@fullcalendar/timegrid/main.css'
@@ -206,7 +204,7 @@
         display: block
         overflow-y: hidden
         height: calc(((100vw - 100px - #{$listGridGap} * 2) / 3) * (9 / 16))
-        max-height: math.div(($listMaxWidth - $listGridGap * 2), 3 ) * math.div(9, 16)
+        max-height: (($listMaxWidth - $listGridGap * 2) / 3 ) * (9 / 16)
         position: relative
         background-color: darken($green, 10%)
         +max-SP
@@ -386,10 +384,10 @@
         margin: 40px 20px auto
         .list
           justify-content: space-between
-          margin: 20px math.div(-$margin-mf, 2)
+          margin: 20px (-$margin-mf / 2)
         .item
-          width: math.div((700px - $margin-mf), 3)
-          margin: 0 math.div($margin-mf, 2) auto
+          width: (700px - $margin-mf)/3
+          margin: 0 $margin-mf/2 auto
           +max-SP
             width: 300px
         .info
