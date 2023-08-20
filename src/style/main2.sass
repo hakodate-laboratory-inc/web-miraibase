@@ -1,3 +1,25 @@
 .plansInfo
   margin-top: 20px
   text-align: center
+
+.paymentPattern
+  display: grid
+  grid-template-columns: auto 1fr auto 1fr auto 1fr auto
+  gap: 20px 8px
+  margin-top: 32px
+
+  .paymentPatternName
+    font-weight: bold
+    width: 100%
+
+  .paymentPatternPlan
+    text-align: right
+
+  .paymentPatternPay
+    text-align: right
+    margin-right: 8px
+    &.isLast
+      margin: 0
+
+  .paymentPatternSpacer
+    display: none
