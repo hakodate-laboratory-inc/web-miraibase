@@ -143,47 +143,102 @@ head
 #price.section
   h2 ご利用料金
     img.tag(src='./images/new-makinas-greenicon.svg')
-  .list
-    .item
-      h3 ドロップイン
-      .grid
-        h4 学生
-        .plan 2時間まで
-        .pay 100円
-          span.taxNotion （税込）
-        .plan 2時間以降
-        .pay 50円/1時間
-          span.taxNotion （税込）
-        h4 一般
-        .plan 2時間利用
-        .pay 1,000円
-          span.taxNotion （税込）
-        .plan 2時間以降
-        .pay 500円/1時間
-          span.taxNotion （税込）
-        p.annotation 利用可能日時
-          br
-          | 毎週月曜日 14:00 ~ 20:00 ( 19時最終入場 )
-    .item
-      h3 部屋の貸切
-      .grid
-        h4 asoviva
-        p.no-grid.plan 貸し切りではご利用いただけません
-        h4 sigotova
-        .plan 学生(1時間ごと)
-        .pay 700円
-          span.taxNotion （税込）
-        .plan 一般(1時間ごと)
-        .pay 3,000円
-          span.taxNotion （税込）
-        h4 会議室予約
-        .plan 2時間ごと
-        .pay 500円
-          span.taxNotion （税込）
-          span.taxNotion 予約されていない場合は無料で利用可能
+  p.caution 価格はすべて税込です。
   .list
     .item.--wide
-      h3 コワーキングスペース月額会員
+      h3 一般料金（企業・団体・フリーランス）
+      .paymentPatternWrapper
+        .paymentPattern
+          h4.paymentPatternName 会議室 1名利用
+          .paymentPatternPlan 1時間 500円
+          .paymentPatternPlan 12時間 4,800円
+          .paymentPatternPlan 24時間 9,600円
+        .paymentPattern
+          h4.paymentPatternName 会議室 2名利用(1人あたり料金)
+          .paymentPatternPlan 1時間 400円
+          .paymentPatternPlan 12時間 3,840円
+          .paymentPatternPlan 24時間 7,680円
+        .paymentPattern
+          h4.paymentPatternName 会議室 3名以上利用(1室あたり料金)
+          .paymentPatternPlan 1時間 1200円
+          .paymentPatternPlan 12時間 11,520円
+          .paymentPatternPlan 24時間 23,040円
+        .paymentPattern
+          h4.paymentPatternName オープンスペース利用 (1人あたり料金)
+          .paymentPatternPlan 1時間 400円
+          .paymentPatternPlan 12時間 3,840円
+          .paymentPatternPlan 24時間 7,680円
+        .paymentPattern
+          h4.paymentPatternName オープンスペース 貸し切り
+          .paymentPatternPlan 1時間 3,000円
+          .paymentPatternPlan 12時間 28,800円
+          .paymentPatternPlan 24時間 57,600円
+        .paymentPattern
+          h4.paymentPatternName 店先利用
+          .paymentPatternPlan 1時間 500円
+          .paymentPatternPlan 12時間 4,800円
+          .paymentPatternPlan 24時間 9,600円
+  .list
+    .item.--wide
+      h3 サークル・非営利団体・求職者
+      .paymentPatternWrapper
+        .paymentPattern
+          h4.paymentPatternName 会議室 1名利用
+          .paymentPatternPlan 1時間 250円
+          .paymentPatternPlan 12時間 2,400円
+          .paymentPatternPlan 24時間 4,800円
+        .paymentPattern
+          h4.paymentPatternName 会議室 2名利用(1人あたり料金)
+          .paymentPatternPlan 1時間 200円
+          .paymentPatternPlan 12時間 1,920円
+          .paymentPatternPlan 24時間 3,840円
+        .paymentPattern
+          h4.paymentPatternName 会議室 3名以上利用(1室あたり料金)
+          .paymentPatternPlan 1時間 600円
+          .paymentPatternPlan 12時間 5,760円
+          .paymentPatternPlan 24時間 11,520円
+        .paymentPattern
+          h4.paymentPatternName オープンスペース利用 (1人あたり料金)
+          .paymentPatternPlan 1時間 200円
+          .paymentPatternPlan 12時間 960円
+          .paymentPatternPlan 24時間 1,920円
+        .paymentPattern
+          h4.paymentPatternName オープンスペース 貸し切り
+          .paymentPatternPlan 1時間 1,500円
+          .paymentPatternPlan 12時間 14,400円
+          .paymentPatternPlan 24時間 28,800円
+        .paymentPattern
+          h4.paymentPatternName 店先利用
+          .paymentPatternPlan 1時間 250円
+          .paymentPatternPlan 12時間 2,400円
+          .paymentPatternPlan 24時間 4,800円
+  .list
+    .item.--wide
+      h3 小・中・高校生・学生・教員担当（未成年）
+      .paymentPatternWrapper
+        .paymentPattern
+          h4.paymentPatternName 会議室利用 (1人あたり料金)
+          .paymentPatternPlan 2時間 100円
+          .paymentPatternPlan 12時間 600円
+          .paymentPatternPlan 24時間 1,200円
+        .paymentPattern
+          h4.paymentPatternName 会議室利用 (1室あたり料金)
+          .paymentPatternPlan 1時間 300円
+          .paymentPatternPlan
+          .paymentPatternPlan
+        .paymentPattern
+          h4.paymentPatternName オープンスペース利用 (1人あたり料金)
+          .paymentPatternPlan 2時間 100円
+          .paymentPatternPlan 12時間 600円
+          .paymentPatternPlan 24時間 1,200円
+        .paymentPattern
+          h4.paymentPatternName オープンスペース 貸し切り
+          .paymentPatternPlan 2時間 600円
+          .paymentPatternPlan
+          .paymentPatternPlan
+  .list
+    .item.--wide
+      h3 コワーキングプラン月額会員
       p.info 定額で契約月内の営業日に何度でもコワーキングスペースをご利用いただけます。
       .list
         .item
@@ -191,7 +246,7 @@ head
             h4 ベーシックプラン
             .price
               .plan 一ヶ月ごと
-              .pay 11,000円
+              .pay 10,000円
                 span.taxNotion （税込）
             .can
               .content
@@ -204,7 +259,7 @@ head
             h4 シルバープラン
             .price
               .plan 一ヶ月ごと
-              .pay 22,000円
+              .pay 20,000円
                 span.taxNotion （税込）
             .can
               .content ベーシックプランのすべてのサービス
@@ -217,7 +272,7 @@ head
             h4 ゴールドプラン
             .price
               .plan 一ヶ月ごと
-              .pay 33,000円
+              .pay 30,000円
                 span.taxNotion （税込）
             .can
               .content シルバープランのすべてのサービス
@@ -229,11 +284,11 @@ head
               .content 郵便物の転送: 週1回, 封筒代送料はお客様負担
             .can
               .content メインスペースの鍵の貸出
-      p.info 詳しくはお問い合わせ頂くか、ドロップイン利用時にスタッフまでお申し出ください。
+      p.info 詳しくはお問い合わせ頂くか、来訪時にスタッフまでお申し出ください。
       p.info 上記以外の時間での利用(朝8時頃から利用したい・朝まで利用したいなど)・その他の日程(土日・別曜日)の希望につきましては、個別にご相談に応じます。スタッフの予定の関係上、なるべく前日までに電話連絡(中村 070-2679-1920 )をお願いいたします。
   .list
     .item.--wide
-      h3 バーチャルオフィス会員
+      h3 バーチャルオフィスプラン会員
       p.info コワーキングスペースの利用を最小限にしオフィスとしての機能をレンタルできるプランです。
       .list
         .item
@@ -241,7 +296,7 @@ head
             h4 ベーシックプラン
             .price
               .plan 一ヶ月ごと
-              .pay 11,000円
+              .pay 10,000円
                 span.taxNotion （税込）
             .can
               .content 非会員を招待しての会議利用: 2日/月まで
@@ -254,7 +309,7 @@ head
             h4 シルバープラン
             .price
               .plan 一ヶ月ごと
-              .pay 22,000円
+              .pay 20,000円
                 span.taxNotion （税込）
             .can
               .content ベーシックプランのすべてのサービス
@@ -271,7 +326,7 @@ head
             h4 ゴールドプラン
             .price
               .plan 一ヶ月ごと
-              .pay 33,000円
+              .pay 30,000円
                 span.taxNotion （税込）
             .can
               .content シルバープランのすべてのサービス
@@ -283,7 +338,47 @@ head
               .content スタッフによる来客対応（要予約）
             .can
               .content コワーキングスペース利用: 月5回まで
-      p.info 詳しくはお問い合わせ頂くか、ドロップイン利用時にスタッフまでお申し出ください。
+      p.info 詳しくはお問い合わせ頂くか、来訪時にスタッフまでお申し出ください。
+      p.info 上記以外の時間での利用(朝8時頃から利用したい・朝まで利用したいなど)・その他の日程(土日・別曜日)の希望につきましては、個別にご相談に応じます。スタッフの予定の関係上、なるべく前日までに電話連絡(中村 070-2679-1920 )をお願いいたします。
+  .list
+    .item.--wide
+      h3 サポータープラン会員
+      p.info コワーキングスペースの利用を最小限にしオフィスとしての機能をレンタルできるプランです。
+      .list
+        .item
+          .wideItem
+            h4 ベーシックプラン
+            .price
+              .plan 一ヶ月ごと
+              .pay 10,000円
+                span.taxNotion （税込）
+            .can
+              .content 非会員を招待しての会議利用: 2日/月まで
+            .can
+              .content パネル掲示
+        .item
+          .wideItem
+            h4 シルバープラン
+            .price
+              .plan 一ヶ月ごと
+              .pay 20,000円
+                span.taxNotion （税込）
+            .can
+              .content 非会員を招待しての会議利用: 3日/月まで
+            .can
+              .content ベーシックプランのすべてのサービス
+        .item
+          .wideItem
+            h4 ゴールドプラン
+            .price
+              .plan 一ヶ月ごと
+              .pay 30,000円
+                span.taxNotion （税込）
+            .can
+              .content 非会員を招待しての会議利用: 3日/月まで
+            .can
+              .content イベント企画運営サポート
+      p.info 詳しくはお問い合わせ頂くか、来訪時にスタッフまでお申し出ください。
       p.info 上記以外の時間での利用(朝8時頃から利用したい・朝まで利用したいなど)・その他の日程(土日・別曜日)の希望につきましては、個別にご相談に応じます。スタッフの予定の関係上、なるべく前日までに電話連絡(中村 070-2679-1920 )をお願いいたします。
 #reserved.section
   h2 部屋の貸し切り利用について
