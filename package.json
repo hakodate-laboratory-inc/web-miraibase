@@ -41,7 +41,7 @@
     "dotenv": "^8.1.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "ftp-deploy": "^2.3.3",
+    "ftp-deploy": "^2.4.7",
     "git-rev-sync": "^3.0.2",
     "husky": "^3.0.5",
     "lint-staged": "^9.2.5",
