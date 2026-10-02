@@ -25,7 +25,7 @@
     "pug": "^3.0.3",
     "sass": "^1.32.2",
     "sweet-scroll": "^3.0.0",
-    "vue": "^2.5.16"
+    "vue": "^3.0.0"
   },
   "scripts": {
     "dev": "parcel src/index.pug --open",
